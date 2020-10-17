@@ -3,67 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>  
-table, th, td {  
-  border: 2px solid black;  
-  border-collapse: collapse;  
-}  
-</style>  
-<body>
-    <div style="text-align:justify">
-    <p>
-    <h1>History of C programming language</h1>
-    <h3>It is good to learn about the history of C programming. C was developed and written by Dennis M. Ritchie in the year 1972, and hence he is known as the founder of C.<br>
+    <title>Mini-Project</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+        scroll-behavior: smooth;
+      }
+       #container::after
+       {
+        content:'';
+            display: block;
+            clear: both;
+       }
 
-C programming language was developed to overcome the difficulties found in older programming languages such as BCPL, BASIC, B, etc.<br></h3>
-<h2> History of C programming language<h2>
-<h3>Here are the lists of programming languages that were developed with or before C:</h3>
-    </p>
+     #headerList li a::after
+      {
+        
+            content:'';
+            display: block;
+            clear: both;  
+      }
+        header::after
+        {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #container
+        {
+            display: block;
+            border:0px black solid;
+        }
+        #header
+        {
+            z-index: 2;
+            position:sticky;
+            top: 5px;
+           display: block;         
+           width: 100%;
+           padding-top: 5px;
+           padding-bottom: 5px;
+           margin-bottom: 10px;
+           margin-left: auto;
+           margin-right: auto;
+            background-color: rgb(112, 111, 111);
+          border:0px solid aqua;
+
+        }
+        #headerIn
+        {
+            display: block;
+        
+            width: 80%;
+          height: 35px;
+         margin-bottom: 5px;
+        
+         padding-bottom: 1px;
+         padding-top: 10px;
+       
+            margin-left: auto;
+           margin-right: auto;
+            border:0px blue solid;
+            background-color: black;
+
+           
+        }
+
+        #headerList
+        {
+            
+            border:0px orangered solid;
+            display:flex;
+            justify-content: center;
+            
+           
+        }
+        #headerList li 
+        {
+             
+            /* padding: 15px; */
+            width: 16%;
+           
+            display: inline-flex;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            border:0px red solid;
+      
+            
+        }
+        #headerList li a
+        {
+            
+            text-decoration: none;
+            border:0px olive solid;
+           color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            width: 100%;
+            
+            
+        }
+
+        #main
+        {
+            border:0px red solid;
+        }
+
+        #main img
+        {
+
+            
+           padding: 5px;
+         
+            width: 100%;
+        }
+        #heading
+        {
+            z-index: 1;
+            border:0px springgreen solid;
+            position:absolute;
+            
+            padding-top: 10px;
+            padding-left: 10px;
+            color: white;
+        }
+        #team-member
+        {
+            padding: 5px;
+            width: 80%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+
+            border:0px greenyellow solid;
+            
+
+        }
+
+        /* #team-member img
+        {
+            margin-right: 20px;
+            border-radius: 50%;
+
+        } */
+
+
+        #about-us
+        {
+            margin-top: 10px;
+            display: block;
+            border:0px springgreen solid;
+            height: 400px;
+        }
+        #left
+        {
+            margin-left: 5px;
+            float: left;
+            display: block;
+            width: 48%;
+            height: 395px;
+            border:0px tomato solid;
+            background-color: rgb(102, 101, 101);
+
+        }
+        #right
+        {
+            margin-right: 5px;
+            float: right;
+            display: block;
+            width: 48%;
+            height: 395px;
+            border:0px tan solid;
+        }
+       #right img
+       {
+           margin-left: 15px;
+           margin-right: 15px;
+           margin-bottom: 15px;
+           height: 120px;
+           width: 95%;
+       }
+       #right h4
+       {
+          
+            right: 20%;          
+            position: absolute;
+            
+           
+       }
+        #technology
+        {
+            display: block;
+            height: 511px;
+            border:0px red solid;
+            margin-top: 5px;
+        }
+
+        .box1
+    {
+       
+        margin: 10px;
+        
+        border-radius:10px ;
+        padding-top: 10px;
+        background-color: white;
+        border: 0px solid red;
+        width: 23%;
+        
+        padding-bottom: 10px;       
+    }
+    .box1 img
+    {
+        width: 276px; 
+        height: 183px;
+        border-radius: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3%;
+        width: 90%;
+    }
+    .box1 p
+    {
+        width: 270px;
+        height: 183px;
+        text-align: justify;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box1 a
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border: 0px solid green;
+        width: 90%;
+        background-color: red;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+        #contact
+        {
+            background-color: violet;
+            border:0px springgreen solid;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        #contact p
+        {
+            text-align: center; 
+            padding-top: 10px; 
+            display:block;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <a name="top"></a>
+    <div id="container">
+
+        <div id="header">
+            
+            <div id="headerIn">
+                <ul id="headerList">
+                    <li><a href="#">HOME</a> </li>
+                    <li><a href="#about-us">ABOUT-US</a></li>
+                    <li><a href="#team">TEAM</a></li>    
+                    <li><a href="#technology">TECHNOLOGY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <input type="text" placeholder="Search here">
+            </ul>
+        </div>
+        </div>
+        <h1 id="heading">Welcome to e-learning</h1>
+        <div id="main">
+            <img src="picture/desktop.jpg" alt="">
+        </div>
+        <!-- <a name="team"></a> -->
+        <!-- <h2 style="text-align: center;">Team Members</h2> -->
+<!-- 
+        <div id="team-member">
+            <img src="picture/1.png" alt="">
+            <img src="picture/2.png" alt="">
+            <img src="picture/3.png" alt="">
+            <img src="picture/9.png" alt="">
+        </div> -->
+        <a name="about-us"></a>
+        <br>
+        <h2 style="text-align: center;">About Us</h2>
+
+        <div id="about-us">
+            <div id="left">
+                <h3 style="color: white;">About Projects</h3>
+               
+                <p style="overflow:hidden; text-align: justify; color: white;">A project consists of a concrete and organized effort motivated by a perceived 
+                    opportunity when facing a problem, a need, a desire or a source of discomfort
+                     (e.g., lack of proper ventilation in a building). It seeks the realization of 
+                     a unique and innovative deliverable, such as a product, a service, a process,
+                      or in some cases, a scientific research. Each project has a beginning and an
+                       end,[4] and as such is considered[by whom?] a closed dynamic system.
+                       [citation needed] It is developed along the 4 Ps of project management: 
+                       Plan, Processes, People, and Power (e.g., line of authority).[citation needed]
+                        It is bound by the triple constraints that are calendar, costs and norms of 
+                        quality,[5] each of which can be determined and measured objectively along 
+                        the project lifecycle.[citation needed] Some projects produce some level of
+                         formal documentation, the deliverable(s), and some impacts, which can be 
+                         positive and/or negative.
+                         A project consists of a concrete and organized effort motivated by a perceived 
+                         opportunity when facing a problem, a need, a desire or a source of discomfort
+                          (e.g., lack of proper ventilation in a building). It seeks the realization of 
+                          a unique and innovative deliverable, such as a product, a service, a process,
+                           or in some cases, a scientific research. Each project has a beginning and an
+                            end,[4] and as such is considered[by whom?] a closed dynamic system.
+                            [citation needed] It is developed along the 4 Ps of project management: 
+                            Plan, Processes, People, and Power (e.g., line of authority).[citation needed]
+                             It is bound by the triple constraints that are calendar, costs and norms of 
+                             quality,[5] each of which can be determined and measured objectively along 
+                             the project lifecycle.[citation needed] Some projects produce some level of
+                              formal documentation, the deliverable(s), and some impacts, which can be 
+                              positive and/or negative.</p>
+            </div>
+            <div id="right">
+                <h4> Programming Language</h4>
+                <img src="picture/p1.jpg" alt="">
+                <h4>Conceptual Subject</h4>
+                <img src="picture/p2.jpeg" alt="">
+                <h4>Other Technical Subject</h4>
+                <img src="picture/p3.jpg" alt="">
+            </div>
+            <br>
+        </div>
+        <br>
+       
+        <a name="contact"></a>
+        <h2 style="text-align:center">Contact</h2>
+        <div id="contact">
+            <p>Website Template For E-Learning <a href="https://www.beta-labs.in/p/html.html" target="_blank">Technical subject Notes</a></p>
+            <a style="display: block; text-align: center;" href="#top">Back to top </a>
+        
+        </div>
+        
     </div>
-    <div>
-    <h3>
-    <table>  
-        <tr><th>Programming Language</th><th>Development Year</th></tr> 
-        <tr><td>Regional Assembly Language</td><td>1951</td></tr>
-        <tr><td>Autocode	1952</td><td>1952</td></tr>
-        <tr><td>IPL (forerunner to LISP)</td><td>1954</td></tr>
-        <tr><td>FLOW-MATIC (led by COBOL)</td><td>1955</td></tr>
-        <tr><td>FORTRAN (First compiler)</td><td>1957</td></tr>
-        <tr><td>COMTRAN (precursor to COBOL)</td><td>1957</td></tr>
-        <tr><td>LISP</td><td>1958</td></tr>
-        <tr><td>ALGOL 58</td><td>1958</td></tr>
-        <tr><td>FACT (forerunner to COBOL)</td><td>1959</td></tr>
-        <tr><td>COBOL</td><td>1959</td></tr>
-        <tr><td>RPG</td><td>1959</td></tr>
-        <tr><td>APL</td><td>1962</td></tr>
-        <tr><td>Simula</td><td>1962</td></tr>
-        <tr><td>SNOBOL</td><td>1962</td></tr>
-        <tr><td>CPL (forerunner to C)</td><td>1963</td></tr>
-        <tr><td>Speakeasy (computational environment)	</td><td>1964</td></tr>
-        <tr><td>BASIC</td><td>1964</td></tr>
-        <tr><td>PL/I</td><td>1964</td></tr>
-        <tr><td>JOSS</td><td>1966</td></tr>
-        <tr><td>BCPL (forerunner to C)</td><td>1967</td></tr>
-    </table>
-    </h3>
-    </div>
-    <div>
-        <p>
-            <h3>
-                C is imperative language and designed to compile in a relatively straightforward manner which provides low-level access to the memory. With the gradual increase in the popularity of the program, the language and its compiler have become available on a wide range of platforms from embedded microcontrollers to supercomputers.<br>
-With the introduction of K&R C language (which is a new edition of C published in 1978 by Brian Kernighan and Denis Ritchie), several features have been included in C language.</h3>
-            <h2>Some of these features are:</h2>
-                <h3>
-                <ul>
-                    <li>Standard I/O (Input/Output) Library</li>
-                    <li>long int - data type</li>
-                     <li>unsigned int - data type</li>
-                     <li>Compound assignment operators</li>
-                 </ul>
-                 </h3>
-        </p>
-    </div>
+    
 </body>
 </html>
