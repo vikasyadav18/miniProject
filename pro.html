@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pro</title>
+    <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: url('picture/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  
+}
+
+
+
+.container
+{
+    border:0px solid red;
+    position: relative;
+    height: 5000px;
+
+}
+.header
+{
+    height: 70px;
+    width: 100%;
+   
+    background: linear-gradient(to right,lightgreen,green);
+       
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+}
+.header img
+{
+    margin-right: 15px;
+    width: 70px;
+    height: 70px;
+    
+}
+.header h1
+{
+   line-height: 70px;
+    color: white;
+}
+.content1
+{
+    
+    width: 100%;
+    padding: 20px;
+
+}
+.content1 img
+{
+   
+    width:70%;
+  
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+.content1 p
+{
+    
+    text-align: justify;
+}
+.sidebar
+{
+    width: 20%;
+    height: 700px;
+    
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+    left: -100%;
+    position: absolute;
+    top: 70px;
+   transition: .4s;
+
+}
+.sidebar ul
+{
+    list-style: none;
+    
+
+}
+
+.sidebar ul li
+{
+    border-bottom: 2px solid rgba(255,255,255,.1);
+}
+
+.sidebar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.sidebar ul li a i
+{
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover
+{
+    border-left: 15px solid white;
+}
+
+.rightbar ul li
+{
+    padding-top: 20px;
+}
+.rightbar ul
+{
+    list-style: none;
+   
+}
+.rightbar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.rightbar
+{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 20%;
+    height: 700px;
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,.1) ;
+    border-top: 2px solid rgba(255,255,255,.1) ;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-top: 360px;
+    padding:10px 25px;
+}
+#chk
+{
+   visibility: hidden;
+}
+
+i
+{
+    color: white;
+   
+    
+}
+.show-btn,.hide-btn
+{
+    color: white;
+    font-size: 30px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+}
+
+.hide-btn
+{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar
+{
+    
+    left: 0%;
+}
+
+#chk:checked ~ .hide-btn
+{
+    opacity: 1;
+}
+
+#chk:checked ~ .show-btn
+{
+    opacity: 0;
+}
+
+#chk:checked ~ .content1
+{
+    width: 80%;
+    margin: auto;
+
+}
+/* #chk:checked ~ .content1 p
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 700px;
+    text-align: justify;
+} */
+
+@media (max-width: 780px)
+{
+    .sidebar
+    {
+        width: 100vw;
+        display: flex;
+       
+        justify-content:center;
+        
+
+    }
+
+    .social
+    {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        
+        justify-content: center;
+
+       
+    }
+    .social a i
+    {
+        padding-left: 10px;
+
+    }
+
+
+
+  
+}
+
+
+
+/* footer */
+
+.footer
+{
+    position: sticky;
+    top: 300px;       
+
+}
+.content
+         {
+             position: absolute;
+           display: block;
+            justify-content: center;
+            color: rgb(110, 109, 109) !important;
+            border: 2 px solid white;
+            bottom: 0px;
+            left: 0;
+         }
+
+         .sec-1
+         {
+             /* background-color: rgb(54, 53, 53); */
+             
+             background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+             display: flex;
+             flex-direction: row;
+             width: 100%;
+             height: auto;
+             padding: 15px;
+             justify-content:space-between;
+         }
+
+         .about
+         {
+             width: 40%;
+         }
+
+         .about h3
+         {
+             color: aliceblue;
+         }
+         .about p
+         {
+             color: rgb(145, 137, 137);
+
+         }
+
+         /* common style  */
+
+         i
+         {
+             padding-right: 5px;
+         }
+         
+
+         a{
+             color: rgb(145, 137, 137);
+             text-decoration: none;
+             text-align: justify;
+         }
+         a:hover
+         {
+             color: orange;
+         }
+         li
+         {
+             color:  rgb(145, 137, 137);
+             list-style: none;
+         }
+
+         h3
+         {
+             text-transform: uppercase;
+             color: aliceblue ;
+             padding-bottom: 5px;
+         }
+         .categories h3
+         {
+            color: aliceblue;
+         }
+
+         .contact
+         {
+             display: display-flex;
+             justify-content: center;
+         }
+
+         .sec-2
+         {
+            
+             
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             padding-top: 20px;
+             padding-bottom: 30px;
+             border-bottom:2px solid rgb(134, 129, 129) ;
+             /* background-color:  rgb(54, 53, 53); */
+             background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
+   
+             flex-direction: ;
+         }
+         
+
+         .sec-2 h3
+         {
+            text-transform: inherit !important;
+             color: rgb(145, 137, 137) !important;
+         }
+
+         .sec-2 a
+         {
+            
+             color: white;
+             background-color: red;
+             padding: 5px 15px;
+             margin-left: 10px;
+             border-radius: 15px;
+         }
+
+         .sec-2 a:hover
+         {
+             background-color: orange;
+         }
+
+         .sec-3
+         {
+             display: flex;
+             justify-content:center;
+             padding-top:20px;
+             padding-bottom:20px;
+             background-color: rgb(54, 53, 53);
+
+         }
+
+         .sec-3 a
+         {
+             padding: 5px;
+             margin-left: 10px;
+             background-color: rgb(238, 235, 235,.1);
+             border-radius: 20px;
+             font-size: 20px;
+         }
+
+        .facebook:hover
+        {
+            background-color: blue;
+        }
+
+        .twitter:hover
+        {
+            background-color: skyblue;
+        }
+        .google:hover
+        {
+            background-color: red;
+        }
+        .linkedin:hover
+        {
+            background-color: lightblue;
+        }
+        .dribbble:hover
+        {
+            background-color: pink;
+        }
+
+
+         
+         .sec-4
+         {
+             display: flex;
+             justify-content: center;
+             background-color: black;
+             height: 50px;
+
+
+         }
+
+         .sec-4 p
+         {
+             line-height: 50px;
+             color: rgb(145, 137, 137);
+
+         }
+
+         .sec-4 p::after
+         {
+             content: '';
+             display: block;
+             width: 0;
+             height: 3px;
+             background-color: orange;
+             position: relative;
+            transition: all .3s;
+            right: 0;
+            bottom: 10px;
+         }
+
+
+
+         .sec-4 p:hover::after
+         { 
+             width: 100%;
+         }
+
+
+.content1 h1
+{
+
+    position: fixed;
+    top: 200px;
+    color: aliceblue;
+    left: 350px;
+    font-size: 35px;
+    background-color: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+}
+
+
+.button a
+{
+    position: fixed;
+    top: 300px;
+    left: 600px;
+    border-radius: 10px;
+    background: linear-gradient(to right,white,green);
+    padding: 10px 10px;
+
+}
+    </style>
+
+
+</head>
+<body>
+ 
+ <div class="container">   
+    <div class="header">
+        <img src="picture/full stack.png" alt="">
+        <h1>E-learning</h1>
+    </div>
+     
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+   
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+       <div class="social" id="social1">
+           <a href="#"><i class="fa fa-facebook-square"></i></a>
+           <a href="#"><i class="fa fa-youtube-square"></i></a>
+           <a href="#"><i class="fa fa-instagram"></i></a>
+       </div>
+    </div>
+
+    <!-- right Side -->
+    <div class="rightbar">
+        <ul>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn DAA</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn HTML</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn Java</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Learn python</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>More</span></i></a></li>
+        </ul>
+      
+    </div>
+    <br>
+    <div class="content1">
+
+     <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
+    </div>
+
+    <div class="button">
+        <a href="#"><sub>let's</sub>START</a>
+    </div>
+
+
+</div>
+
+
+
+<!-- footer -->
+
+<div class="footer">
+   
+    <footer>
+        <section class="sec-1">
+
+            <section class="about">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quaerat fugiat, quod temporibus dicta eveniet quibusdam obcaecati quidem fugit asperiores veniam odio dolorum voluptas optio sit magnam commodi veritatis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit officiis quasi quos corrupti, id illum labore cum totam a ut. Eius dicta earum expedita, laudantium distinctio consectetur! Doloremque, molestiae maiores?</p>
+            </section>
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li> <a href="#">C</a> </li>
+                    <li> <a href="#">UI Design</a> </li>
+                    <li> <a href="#">PHP</a> </li>
+                    <li> <a href="#">Java</a> </li>
+                    <li> <a href="#">Android</a> </li>
+                    <li> <a href="#">Templates</a> </li>
+                    
+                </ul>
+            </section>
+            <section class="quick-links">
+                <h3>Quick-links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                   
+                </ul>
+            </section>
+            <section class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li> <a href="#"> <i class="fa fa-home"></i> <span>Karhal,mainpuri,UP,India</span> </a></li>
+                    <li> <a href="#"> <i class="fa fa-envelope-o"></i> <span>vikas.yadav_cs18@gla.ac.in</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-mobile"></i> <span>9045****35</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-facebook"></i><span>myvikasyadav</span> </a></li>
+                </ul>
+            </section>
+
+        </section>
+       
+        <section class="sec-2">
+            <h3>Register for Free</h3>
+            <a href="#">Signup!</a>
+
+        </section>
+
+        
+
+        <section class="sec-3">
+           <a href="#" class="facebook" ><i class="fa fa-facebook" ></i></a> 
+           <a href="#" class="twitter"><i class="fa fa-twitter" ></i></a> 
+           <a href="#" class="google" ><i class="fa fa-google" ></i></a> 
+           <a href="#" class="linkedin" ><i class="fa fa-linkedin" ></i></a> 
+           <a href="#" class="dribbble" ><i class="fa fa-dribbble" ></i></a> 
+        </section>
+        
+        <section class="sec-4">
+            <p>Copyright @ 2020 All Rights Reserved by <span> <a href="#">Vikas-Yadav</a></span> </p>
+        </section>
+    </footer>
+</div> 
+      
+</body>
+</html>
