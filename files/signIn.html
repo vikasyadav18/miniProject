@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <title>Sign-In</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body
+         {
+        background-image: url('https://vikasyadav18.github.io/miniProject/picture/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        }
+
+    
+
+    header h1
+    {
+        text-transform: uppercase;
+        color: red;
+        font-size: 80px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .main-container
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+    }
+/* 1st template */
+
+
+    /* 2nd template */
+
+    .form-template2
+    {
+        margin-top: 40px;
+        width: 300px;
+        height: 350px;
+        background-color: #fff;
+        margin-right: 10px;
+       
+    }
+    .form-header-t2
+    {
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+       
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-header-t2 h1
+    {
+        color: rgb(214, 74, 139);
+        font-size: 20px;
+        padding-top: 20px;
+    }
+   
+    .form-container-t2
+    {
+        padding: 20px;
+
+    }
+
+    input[type='email']
+    {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid grey;
+        padding:10px 0px;
+        width: 100%;
+        margin-bottom: 15px;
+        
+    }
+    input[type='password']
+    {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid grey;
+        padding:10px 0px;
+        width: 100%;
+        
+    }
+    .form-container-t2 p
+    {
+        font-size: 12px;
+        color: grey;
+        padding: 20px 0;
+        text-align: right;
+    }
+
+    .form-container-t2 p b
+    {
+        color: rgb(0, 162, 255);
+    }
+
+    #login
+    {
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        background-color:rgb(148, 76, 243);
+        color: white;
+        
+        padding:10px 20px; 
+    }
+    input[type='checkbox']
+    {
+        
+       font-size: 20px;
+       
+        color: white;
+        
+        padding:10px 20px; 
+    }
+
+    .form-container-t2 p#p2
+    {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .form-container-t2 p#p1
+    {
+        display: inline-block;
+        margin-left: px;
+    }
+    .social2
+    {
+        width: 100%;
+        height: 65px;
+        background: linear-gradient(to right,rgb(7, 139, 190),white);
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .social2 i
+    {
+        color: #fff;
+        margin-left: 20px;
+    }
+    
+    /* 3rd template */
+
+
+    </style>
+
+</head>
+<body>
+<header><h1>form template</h1></header>
+
+<div class="main-container">
+
+<!-- 1st template  -->
+
+
+
+<!-- 2nd template  -->
+
+<div class="form-template2">
+    <div class="form-header-t2">
+        <h1>SIGN UP</h1>
+       
+    </div>
+    <div class="form-container-t2">
+        <div>
+            <input type="email" name="email" id="email" placeholder="Enter Email">
+        </div>
+
+        <div>
+            <input type="password" name="pwd" id="pwd" placeholder="Enter Password">
+        </div>
+
+        <input type="checkbox" >
+        <p id="p1">Accept the <b>Terms and Conditions</b></p>
+        <input type="submit" value="LOGIN" id="login">
+        <p id="p2">have an account? Login <b>Login</b> </p>
+    </div>
+    <div class="social2">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-google"></i>
+    </div>
+</div>
+
+
+
+<!-- 3rd template  -->
+
+</div>
+    
+</body>
+</html>
