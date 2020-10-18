@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cintro</title>
+    <title>C++ 1</title>
     <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -32,7 +32,7 @@
     width: 100%;
    
     background: linear-gradient(to right,lightgreen,green);
-    z-index: 1;   
+    z-index: 1;
     display: flex;
     position: fixed;
     justify-content: center;
@@ -458,55 +458,37 @@ i
              width: 100%;
          }
 
-         .Ccontent p
-         {
-             color: rgb(153, 0, 255);  ;
-         }
+         
 
-         .text
+         
+
+         .Clist li
          {
-            position: relative;
-            top: 90px;
-            width: 40%;
-            font-size: 20px;
-            float: left;
+             color:rgb(153, 0, 255) ;
          }
 
          .Ccontent
          {
-             display: flex;
-             position: relative;
-            
-             left: 100px;
-             justify-content:space-evenly;
-             align-items: center;
-             width: 60%;
+            position: relative;
+            top: 80px;
+            left: 100px;
+            width: 60%; 
          }
-         .orderlist
-         {
-             top: 10px;
-             position: relative;
-             left: 10px;
-             list-style-type: circle;
-         }
-.orderlist li
-{
-    color: purple;
-}
-         table, th, td {  
+        
+
+        .Ccontent h3 
+        {  
+   
+            color: rgb(153, 0, 255); 
+  
+        } 
+
+        table, th, td {  
+            padding: 10px 10px;
   border: 2px solid black;  
-  border-collapse: collapse;
-  color: rgb(153, 0, 255); 
-  padding: 15px 15px; 
+  border-collapse: collapse;  
 } 
-.table
-{
-    position: relative;
-    top: 80px;
-    width: 20%;
-    float: right;
-    
-}
+
 
    
     </style>
@@ -547,9 +529,9 @@ i
     <!-- right Side -->
     <div class="rightbar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C Intro</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C programming</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python1.html"><i class="fa fa-tasks"><span></span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python2.html"><i class="fa fa-tasks"><span>2-Python</span></i></a></li>
+           <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
         </ul>
       
     </div>
@@ -557,65 +539,85 @@ i
     
 <!-- content of C intro programming -->
 
-<div class="Ccontent">
-    <div class="text"  style="text-align:justify">
-        
-        <h1 style="color: rgb(135, 128, 228);">History of C programming language</h1>
-        <p> It is good to learn about the history of C programming. C was developed and written by Dennis M. Ritchie in the year 1972, and hence he is known as the founder of C.
-         C programming language was developed to overcome the difficulties found in older programming languages such as BCPL, BASIC, B, etc.
-        </p>
-    <h2> History of C programming language<h2>
-        
-    <p>
-        C is imperative language and designed to compile in a relatively straightforward manner which provides low-level access to the memory. With the gradual increase in the popularity of the program, the language and its compiler have become available on a wide range of platforms from embedded microcontrollers to supercomputers.<br>
-With the introduction of K&R C language (which is a new edition of C published in 1978 by Brian Kernighan and Denis Ritchie), several features have been included in C language.</h3>
-</p>  
 
-<h2>Some of these features are:</h2>
-            
-            <ol start="1" class="orderlist">
-                <li>Standard I/O (Input/Output) Library</li>
-                <li>long int - data type</li>
-                 <li>unsigned int - data type</li>
-                 <li>Compound assignment operators</li>
-             </ol>
-
-</div>
-
-        
-    
-
-        <div class="table">
-        
-        <table>  
-            <tr><th>Programming Language</th><th>Development Year</th></tr> 
-            <tr><td>Regional Assembly Language</td><td>1951</td></tr>
-            <tr><td>Autocode	1952</td><td>1952</td></tr>
-            <tr><td>IPL (forerunner to LISP)</td><td>1954</td></tr>
-            <tr><td>FLOW-MATIC (led by COBOL)</td><td>1955</td></tr>
-            <tr><td>FORTRAN (First compiler)</td><td>1957</td></tr>
-            <tr><td>COMTRAN (precursor to COBOL)</td><td>1957</td></tr>
-            <tr><td>LISP</td><td>1958</td></tr>
-            <tr><td>ALGOL 58</td><td>1958</td></tr>
-            <tr><td>FACT (forerunner to COBOL)</td><td>1959</td></tr>
-            <tr><td>COBOL</td><td>1959</td></tr>
-            <tr><td>RPG</td><td>1959</td></tr>
-            <tr><td>APL</td><td>1962</td></tr>
-            <tr><td>Simula</td><td>1962</td></tr>
-            <tr><td>SNOBOL</td><td>1962</td></tr>
-            <tr><td>CPL (forerunner to C)</td><td>1963</td></tr>
-            <tr><td>Speakeasy (computational environment)	</td><td>1964</td></tr>
-            <tr><td>BASIC</td><td>1964</td></tr>
-            <tr><td>PL/I</td><td>1964</td></tr>
-            <tr><td>JOSS</td><td>1966</td></tr>
-            <tr><td>BCPL (forerunner to C)</td><td>1967</td></tr>
-        </table>
-        
-        </div>
-       
+<div style="text-align:justify" class="Ccontent">
+/*4 page*/
+<h1>C++ Classes</h1>
+    <h3>
+        <ul>
+            <li> C++ OOP</li>
+            <li> C++ Classes/Objects</li>
+            <li> C++ Class Methods</li>
+            <li> C++ Constructors</li>
+            <li> C++ Access Specifiers</li>
+            <li> C++ Encapsulation</li>
+            <li> C++ Inheritance</li>
+            <li> C++ Polymorphism</li>
+            <li> C++ Files</li>
+            <li> C++ Exceptions</li>
+        </ul>
+    </h3>
+<h1>Applications of C++</h1>
+<h3>
+Using C++, you can develop system software like OS, Device Drivers, Network(N/W) protocols, PC – utilities.<br>
+Application software you can develop application like:<br><br>
+    <ul>
+        <li> Database</li>
+        <li> Word processing</li>
+        <li> Spreadsheets</li>
+        <li> C++ is a general purpose programming language better than ‘c’.</li>
+        <li> General purpose means it is suitable for developing any software.</li>
+        <li> CUI means a character user interface.</li>
+    </ul>
+</h3>
+/*5 page*/
+<h1>Advantages of C++</h1>
+<h3>
+    <ul>
+        <li> Object oriented</li>
+        <li> Portable language (writing a program irrespective of operating system as well as Hardware)</li>
+        <li> Low-level language like Assembly language on Machine language called portable.</li>
+        <li> C++ use multi-paradigm programming. The Paradigm means the style of programming .paradigm concerned about logics, structure, and procedure of the program. C++ is multi-paradigm means it follows three paradigm Generic, Imperative, Object Oriented.<</li>
+        <li> It is useful for the low-level programming language and very efficient for general purpose.</li>
+        <li> C++ provide performance and memory efficiency.</li>
+        <li> It provides a high-level abstraction.</li>
+        <li> In the language of the problem domain.</li>
+        <li> C++ is compatible with  C.</li>
+        <li> C++ used reusability of code.</li>
+        <li> C++ used inheritance, polymorphism.</li>
+    </ul>
+</h3>
+<h1>Disadvantages of C++</h1>
+<h3>
+    <ul>
+        <li> It has no security</li>
+        <li> Complex in a very large high-level program.</li>
+        <li> Used for platform specific application commonly.</li>
+        <li> For a particular operating system or platform, the library set has usually chosen that locks.</li>
+        <li> When C++ used for web applications complex and difficult to debug.</li>
+        <li> C++ can't support garbage collection.</li>
+        <li> C++ is not secure because it has a pointer, friend function, and global variable.</li>
+        <li> No support for threads built in.</li>
+    <ul>
+</h3>
+<h1>MAIN FEATURES OF C++</h1>
+<h3>
+There are various features of C++ such as:<br><br>
+    <ul>
+        <li> Object Oriented.</li>
+        <li> Simple.</li>
+        <li> Platform Dependent.</li>
+        <li> Mid-level programming language.</li>
+        <li> Structured programming language.</li>
+        <li> Rich Library.</li>
+        <li> Memory Management.</li>
+        <li> Powerful & Fast</li>
+     </ul>
+</h3>        
 </div>
 
 <!-- content of C intro programming -->
+
 
 <!-- footer -->
 

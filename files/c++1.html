@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cintro</title>
+    <title>C++ 1</title>
     <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -30,9 +30,9 @@
 {
     height: 70px;
     width: 100%;
-   
+   z-index: 1;
     background: linear-gradient(to right,lightgreen,green);
-    z-index: 1;   
+       
     display: flex;
     position: fixed;
     justify-content: center;
@@ -458,55 +458,37 @@ i
              width: 100%;
          }
 
-         .Ccontent p
-         {
-             color: rgb(153, 0, 255);  ;
-         }
+         
 
-         .text
+         
+
+         .Clist li
          {
-            position: relative;
-            top: 90px;
-            width: 40%;
-            font-size: 20px;
-            float: left;
+             color:rgb(153, 0, 255) ;
          }
 
          .Ccontent
          {
-             display: flex;
-             position: relative;
-            
-             left: 100px;
-             justify-content:space-evenly;
-             align-items: center;
-             width: 60%;
+            position: relative;
+            top: 80px;
+            left: 100px;
+            width: 60%; 
          }
-         .orderlist
-         {
-             top: 10px;
-             position: relative;
-             left: 10px;
-             list-style-type: circle;
-         }
-.orderlist li
-{
-    color: purple;
-}
-         table, th, td {  
+        
+
+        .Ccontent h3 
+        {  
+   
+            color: rgb(153, 0, 255); 
+  
+        } 
+
+        table, th, td {  
+            padding: 10px 10px;
   border: 2px solid black;  
-  border-collapse: collapse;
-  color: rgb(153, 0, 255); 
-  padding: 15px 15px; 
+  border-collapse: collapse;  
 } 
-.table
-{
-    position: relative;
-    top: 80px;
-    width: 20%;
-    float: right;
-    
-}
+
 
    
     </style>
@@ -547,9 +529,9 @@ i
     <!-- right Side -->
     <div class="rightbar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C Intro</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C programming</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python1.html"><i class="fa fa-tasks"><span></span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/python2.html"><i class="fa fa-tasks"><span>2-Python</span></i></a></li>
+           <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
         </ul>
       
     </div>
@@ -557,65 +539,99 @@ i
     
 <!-- content of C intro programming -->
 
-<div class="Ccontent">
-    <div class="text"  style="text-align:justify">
-        
-        <h1 style="color: rgb(135, 128, 228);">History of C programming language</h1>
-        <p> It is good to learn about the history of C programming. C was developed and written by Dennis M. Ritchie in the year 1972, and hence he is known as the founder of C.
-         C programming language was developed to overcome the difficulties found in older programming languages such as BCPL, BASIC, B, etc.
-        </p>
-    <h2> History of C programming language<h2>
-        
-    <p>
-        C is imperative language and designed to compile in a relatively straightforward manner which provides low-level access to the memory. With the gradual increase in the popularity of the program, the language and its compiler have become available on a wide range of platforms from embedded microcontrollers to supercomputers.<br>
-With the introduction of K&R C language (which is a new edition of C published in 1978 by Brian Kernighan and Denis Ritchie), several features have been included in C language.</h3>
-</p>  
 
-<h2>Some of these features are:</h2>
-            
-            <ol start="1" class="orderlist">
-                <li>Standard I/O (Input/Output) Library</li>
-                <li>long int - data type</li>
-                 <li>unsigned int - data type</li>
-                 <li>Compound assignment operators</li>
-             </ol>
 
-</div>
+<div style="text-align:justify" class="Ccontent">
+    <!-- /*1 page*/ -->
+    <h1>WHAT IS C++</h1>
+    <h3>C++ is one of the world's most popular programming languages.<br>
+        C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.<br>
+        C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.<br>
+        C++ is portable and can be used to develop applications that can be adapted to multiple platforms.<br>
+        C++ is fun and easy to learn!<br>
+        As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa<br>
+    </h3>
+    <h1>C++ DATATYPES </h1>
+    <h3>
+        <ul  class="Clist">
+            <li>int myNum = 5;               // Integer (whole number) </li>
+            <li>float myFloatNum = 5.99;     // Floating point number</li>
+            <li>double myDoubleNum = 9.98;   // Floating point number</li>
+            <li>double myDoubleNum = 9.98;   // Floating point number</li>
+            <li>bool myBoolean = true;       // Boolean</li>
+            <li>string myText = "Hello";     // String</li>
+        </ul>
+    </h3>    
+    <h1>BASIC DATATYPES AND DESCRIPTION</h1>
+    <table>  
+            <tr><th>Data Type</th><th>Size</th><th>Description</th></tr> 
+            <tr><th>int</th><th>4 bytes</th><th>Stores whole numbers, without decimals</th></tr> 
+            <tr><th>float</th><th>4 bytes</th><th>Stores fractional numbers, containing one or more decimals. Sufficient for storing 7 decimal digits</th></tr> 
+            <tr><th>double</th><th>4 bytes</th><th>Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits</th></tr> 
+            <tr><th>boolean</th><th>4 bytes</th><th>Stores true or false values</th></tr> 
+            <tr><th>char</th><th>4 bytes</th><th>Stores a single character/letter/number, or ASCII values</th></tr> 
+    </table>
+    <!-- /*2 page*/ -->
+    <h1>FOLLOWING OPERATORS USED IN C++</h1>
+    <h3>
+        C++ divides the operators into the following groups:
+        <ol  class="Clist">
+            <li>Arithmetic operators</li>
+            <li>Assignment operators</li>
+            <li>Comparison operators</li>
+            <li>Logical operators</li>
+            <li>Bitwise operators</li>
+        </ol>
+    </h3>
+    <h1>ARITHMETIC OPERATORS</h1>
+    <table>  
+            <tr><th>Operator</th><th>Name</th><th>Description</th><th>Example</th></tr> 
+            <tr><th>+</th><th>Addition</th><th>Adds together two values</th><th>x+y</th></tr> 
+            <tr><th>-</th><th>Subtraction</th><th>Subtract one value from another</th><th>x-y</th></tr> 
+            <tr><th>*</th><th>Multiplication</th><th>Multiplication two values</th><th>x*y</th></tr> 
+            <tr><th>/</th><th>Division</th><th>Divide one value by another</th><th>x/y</th></tr> 
+            <tr><th>%</th><th>Modulus</th><th>Returns the division remainder</th><th>x%y</th></tr> 
+            <tr><th>++</th><th>Increment</th><th>Increases the value of a variable by 1</th><th>++x</th></tr>
+            <tr><th>--</th><th>Decrement</th><th>|Decreases the value of a variable by 1</th><th>--x</th></tr>
+    </table>
+    <h1>Assignment operators</h1>
+    <table>
+            <tr><th>Operator</th><th>Example</th><th>Same As</th></tr>
+            <tr><th>=</th><th>x = 5</th><th>x = 5</th></tr>
+            <tr><th>+=</th><th>x += 3</th><th>x = x + 3</th></tr>
+            <tr><th>-=</th><th>x -= 3</th><th>x = x - 3</th></tr>
+            <tr><th>*=</th><th>x *= 3</th><th>x = x 8 3</th></tr>
+            <tr><th>/=</th><th>x /= 3</th><th>x = x / 3</th></tr>
+            <tr><th>%=</th><th>x %= 3</th><th>x = x % 3</th></tr>
+            <tr><th>&=</th><th>x &= 3</th><th>x = x & 3</th></tr>
+            <tr><th>|=</th><th>x |= 3</th><th>x = x | 3</th></tr>
+            <tr><th>^=</th><th>x ^= 3</th><th>x = x ^ 3</th></tr>
+            <tr><th>>>=</th><th>x >>= 3</th><th>x = x >> 3</th></tr>
+            <tr><th><<=</th><th>x <<= 3</th><th>x = x << 3</th></tr>
+    </table>    
+    <!-- /*3 page*/     -->
+    <h1>Comparison operators</h1>
+    <table>
+            <tr><th>Operator</th><th>Name</th><th>example</th></tr>
+            <tr><th>==</th><th>Equal to</th><th>x == y</th></tr>
+            <tr><th>!=</th><th>Not Equal to</th><th>x ! y   </th></tr>
+            <tr><th>></th><th>Greater than</th><th>x > y</th></tr>
+            <tr><th><</th><th>Less than</th><th>x < y</th></tr>
+            <tr><th>>=</th><th>Greater than or equal to</th><th>x >= y</th></tr>
+            <tr><th><=</th><th>Less than or equal to</th><th>x <= y</th></tr>
+    </table>
+    <h1>Logical operators</h1>
+    <table>
+            <tr><th>Operator</th><th>Example</th><th>Description</th></tr>
+            <tr><th>&&</th><th>x < 5 &&  x < 10</th><th>Logical and Returns true if both statements are true</th></tr>
+            <tr><th>||</th><th>x < 5 || x < 4</th><th>Logical or    Returns true if one of the statements is true</th></tr>
+            <tr><th>!</th><th>! (x < 5 && x < 10)</th><th>Logical not   Reverse the result, returns false if the result is true </th></tr>
+    </table>  
 
-        
-    
-
-        <div class="table">
-        
-        <table>  
-            <tr><th>Programming Language</th><th>Development Year</th></tr> 
-            <tr><td>Regional Assembly Language</td><td>1951</td></tr>
-            <tr><td>Autocode	1952</td><td>1952</td></tr>
-            <tr><td>IPL (forerunner to LISP)</td><td>1954</td></tr>
-            <tr><td>FLOW-MATIC (led by COBOL)</td><td>1955</td></tr>
-            <tr><td>FORTRAN (First compiler)</td><td>1957</td></tr>
-            <tr><td>COMTRAN (precursor to COBOL)</td><td>1957</td></tr>
-            <tr><td>LISP</td><td>1958</td></tr>
-            <tr><td>ALGOL 58</td><td>1958</td></tr>
-            <tr><td>FACT (forerunner to COBOL)</td><td>1959</td></tr>
-            <tr><td>COBOL</td><td>1959</td></tr>
-            <tr><td>RPG</td><td>1959</td></tr>
-            <tr><td>APL</td><td>1962</td></tr>
-            <tr><td>Simula</td><td>1962</td></tr>
-            <tr><td>SNOBOL</td><td>1962</td></tr>
-            <tr><td>CPL (forerunner to C)</td><td>1963</td></tr>
-            <tr><td>Speakeasy (computational environment)	</td><td>1964</td></tr>
-            <tr><td>BASIC</td><td>1964</td></tr>
-            <tr><td>PL/I</td><td>1964</td></tr>
-            <tr><td>JOSS</td><td>1966</td></tr>
-            <tr><td>BCPL (forerunner to C)</td><td>1967</td></tr>
-        </table>
-        
-        </div>
-       
-</div>
+</div>  
 
 <!-- content of C intro programming -->
+
 
 <!-- footer -->
 
