@@ -15,6 +15,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+html {
+        scroll-behavior: smooth;
+        scroll-padding-top:120px ;
+      }
 body {
   background-image: url('picture/background.jpg');
   background-repeat: no-repeat;
@@ -36,9 +40,9 @@ body {
 {
     height: 70px;
     width: 100%;
-    
+    z-index:5;
     background: linear-gradient(to right,lightgreen,green);
-       
+       /* background-color: green; */
     display: flex;
     position: fixed;
     justify-content: center;
@@ -54,6 +58,7 @@ body {
 }
 .header h1
 {
+    z-index: 1;
    line-height: 70px;
     color: white;
 }
@@ -146,7 +151,7 @@ body {
 
 .rightbar
 {
-    
+    z-index:3;
     display: block;
     position: absolute;
     right: 0;
@@ -477,6 +482,7 @@ i
              justify-content: center;
              align-items: center;
              width: 60%;
+             z-index:2;
          }
 
     </style>

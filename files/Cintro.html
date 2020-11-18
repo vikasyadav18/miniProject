@@ -30,7 +30,7 @@
 {
     height: 70px;
     width: 100%;
-   
+   z-index: 5;
     background: linear-gradient(to right,lightgreen,green);
        
     display: flex;
@@ -140,8 +140,9 @@
 
 .rightbar
 {
+     z-index:3;
     display: block;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 70px;
     width: 20%;
@@ -476,7 +477,7 @@ i
          {
              display: flex;
              position: relative;
-            
+            z-index: 2;
              left: 100px;
              justify-content:space-evenly;
              align-items: center;
