@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cintro</title>
+    <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.container
+{
+    border:0px solid red;
+    position: relative;
+    height: 4000px;
+
+}
+.header
+{
+    height: 70px;
+    width: 100%;
+   z-index: 5;
+    background: linear-gradient(to right,lightgreen,green);
+ 
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+}
+.header img
+{
+    margin-right: 15px;
+    width: 70px;
+    height: 70px;
+    
+}
+.header h1
+{
+   line-height: 70px;
+    color: white;
+}
+.content1
+{
+    
+    width: 100%;
+    padding: 20px;
+
+}
+.content1 img
+{
+   
+    width:70%;
+  
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+.content1 p
+{
+    
+    text-align: justify;
+}
+.sidebar
+{
+    width: 20%;
+    height: 700px;
+    
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+    left: -100%;
+    position: absolute;
+    top: 70px;
+   transition: .4s;
+
+}
+.sidebar ul
+{
+    list-style: none;
+    
+
+}
+
+.sidebar ul li
+{
+    border-bottom: 2px solid rgba(255,255,255,.1);
+}
+
+.sidebar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.sidebar ul li a i
+{
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover
+{
+    border-left: 15px solid white;
+}
+
+.rightbar ul li
+{
+    padding-top: 20px;
+}
+.rightbar ul
+{
+    list-style: none;
+   
+}
+.rightbar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.rightbar
+{
+     z-index:3;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 20%;
+    height: 700px;
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,.1) ;
+    border-top: 2px solid rgba(255,255,255,.1) ;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-top: 360px;
+    padding:10px 25px;
+}
+#chk
+{
+   visibility: hidden;
+}
+
+i
+{
+    color: white;
+   
+    
+}
+.show-btn,.hide-btn
+{
+    color: white;
+    font-size: 30px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 6;
+}
+
+.hide-btn
+{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar
+{
+    
+    left: 0%;
+}
+#chk:checked ~ .father
+{
+    margin-left: 250px;
+}
+
+#chk:checked ~ .hide-btn
+{
+    opacity: 1;
+}
+
+#chk:checked ~ .show-btn
+{
+    opacity: 0;
+}
+
+#chk:checked ~ .content1
+{
+    width: 80%;
+    margin: auto;
+
+}
+/* #chk:checked ~ .content1 p
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 700px;
+    text-align: justify;
+} */
+
+@media (max-width: 780px)
+{
+    .sidebar
+    {
+        width: 100%;
+        display: flex;
+       
+        justify-content:center;
+        
+
+    }
+    .rightbar
+    {
+        visibility: hidden;
+    }
+
+    .social
+    {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        
+        justify-content: center;
+
+       
+    }
+    .social a i
+    {
+        padding-left: 10px;
+
+    }
+
+
+
+  
+}
+
+
+
+/* footer */
+
+.footer
+{
+    position: sticky;
+    top: 4000px;       
+
+}
+.content
+         {
+             position: absolute;
+           display: block;
+            justify-content: center;
+            color: rgb(110, 109, 109) !important;
+            border: 2 px solid white;
+            bottom: 0px;
+            left: 0;
+         }
+
+         .sec-1
+         {
+             /* background-color: rgb(54, 53, 53); */
+             
+             background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+             display: flex;
+             flex-direction: row;
+             width: 100%;
+             height: auto;
+             padding: 15px;
+             justify-content:space-between;
+         }
+
+         .about
+         {
+             width: 40%;
+         }
+
+         .about h3
+         {
+             color: aliceblue;
+         }
+         .about p
+         {
+             color: rgb(145, 137, 137);
+
+         }
+
+         /* common style  */
+
+         i
+         {
+             padding-right: 5px;
+         }
+         
+
+         a{
+             color: rgb(145, 137, 137);
+             text-decoration: none;
+             text-align: justify;
+         }
+         a:hover
+         {
+             color: orange;
+         }
+         li
+         {
+             color:  rgb(145, 137, 137);
+             list-style: none;
+         }
+
+         h3
+         {
+             text-transform: uppercase;
+             color: aliceblue ;
+             padding-bottom: 5px;
+         }
+         .categories h3
+         {
+            color: aliceblue;
+         }
+
+         .contact
+         {
+             display: display-flex;
+             justify-content: center;
+         }
+
+         .sec-2
+         {
+            
+             
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             padding-top: 20px;
+             padding-bottom: 30px;
+             border-bottom:2px solid rgb(134, 129, 129) ;
+             /* background-color:  rgb(54, 53, 53); */
+             background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
+   
+             flex-direction: ;
+         }
+         
+
+         .sec-2 h3
+         {
+            text-transform: inherit !important;
+             color: rgb(145, 137, 137) !important;
+         }
+
+         .sec-2 a
+         {
+            
+             color: white;
+             background-color: red;
+             padding: 5px 15px;
+             margin-left: 10px;
+             border-radius: 15px;
+         }
+
+         .sec-2 a:hover
+         {
+             background-color: orange;
+         }
+
+         .sec-3
+         {
+             display: flex;
+             justify-content:center;
+             padding-top:20px;
+             padding-bottom:20px;
+             background-color: rgb(54, 53, 53);
+
+         }
+
+         .sec-3 a
+         {
+             padding: 5px;
+             margin-left: 10px;
+             background-color: rgb(238, 235, 235,.1);
+             border-radius: 20px;
+             font-size: 20px;
+         }
+
+        .facebook:hover
+        {
+            background-color: blue;
+        }
+
+        .twitter:hover
+        {
+            background-color: skyblue;
+        }
+        .google:hover
+        {
+            background-color: red;
+        }
+        .linkedin:hover
+        {
+            background-color: lightblue;
+        }
+        .dribbble:hover
+        {
+            background-color: pink;
+        }
+
+
+         
+         .sec-4
+         {
+             display: flex;
+             justify-content: center;
+             background-color: black;
+             height: 50px;
+
+
+         }
+
+         .sec-4 p
+         {
+             line-height: 50px;
+             color: rgb(145, 137, 137);
+
+         }
+
+         .sec-4 p::after
+         {
+             content: '';
+             display: block;
+             width: 0;
+             height: 3px;
+             background-color: orange;
+             position: relative;
+            transition: all .3s;
+            right: 0;
+            bottom: 10px;
+         }
+
+
+
+         .sec-4 p:hover::after
+         { 
+             width: 100%;
+         }
+
+         .Ccontent p
+         {
+             color: rgb(153, 0, 255);  ;
+         }
+
+         .text
+         {
+            position: relative;
+            top: 90px;
+            width: 40%;
+            font-size: 20px;
+            float: left;
+         }
+
+         .Ccontent
+         {
+             display: flex;
+             position: relative;
+            z-index: 2;
+             left: 100px;
+             justify-content:space-evenly;
+             align-items: center;
+             width: 60%;
+         }
+         .orderlist
+         {
+             top: 10px;
+             position: relative;
+             left: 10px;
+             list-style-type: circle;
+         }
+.orderlist li
+{
+    color: purple;
+}
+         table, th, td {  
+  border: 2px solid black;  
+  border-collapse: collapse;
+  color: rgb(153, 0, 255); 
+  padding: 15px 15px; 
+} 
+.table
+{
+    position: relative;
+    top: 80px;
+    width: 20%;
+    float: right;
+    
+}
+.Daacontent h1
+{
+   
+    color: green;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+
+}
+.Daacontent p
+{
+    text-align: justify;
+    width: 800px;
+    margin-left: 50px;
+   
+}
+#order li
+{
+    list-style-type:square;
+    margin-left: 70px;
+    color: black;
+    width: 50rem;
+}
+#para2
+{ text-align: justify;
+    width: 800px;
+    margin-left: 50px;
+  
+
+}
+
+#codeContainer,#codeContainer1
+{
+   
+    display: flex;
+   
+    flex-direction: row;
+    background: linear-gradient(to right,rgba(152, 232, 235, 0.7), rgba(13, 91, 236, 0.7));
+   
+    width: 550px;
+    margin-left: 50px;
+    
+}
+
+#java,#c,#java1,#c1
+{
+    font-weight: bold;
+    margin-left: 10px;
+    padding:4px 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: green;
+    color: white;
+    border-radius: 5px;
+}
+#code1,#code2,#insertion1,#insertion2
+{
+     visibility: hidden; 
+
+}
+#code1,#insertion1
+{
+    position: absolute;  
+}
+
+#showCode,#showCode2
+{font-weight: bold;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 4px 5px;
+    background: green;
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+    </style>
+
+
+</head>
+<body>
+ 
+ <div class="container">   
+    <div class="header">
+        
+        <h1>Study <sub>Point</sub></h1>
+    </div>
+     
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+   
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-home"><span>home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+       <div class="social" id="social1">
+           <a href="#"><i class="fa fa-facebook-square"></i></a>
+           <a href="#"><i class="fa fa-youtube-square"></i></a>
+           <a href="#"><i class="fa fa-instagram"></i></a>
+       </div>
+    </div>
+
+    <!-- right Side -->
+    <div class="rightbar">
+        <ul>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C Intro</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C programming</span></i></a></li>
+            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
+        </ul>
+      
+    </div>
+    <br>
+    
+<!-- content of Daa intro  -->
+<div class="father">
+<div class="Daacontent">
+    
+    <h1>Binary Search Tree | Set 1 (Search and Insertion)</h1>
+     
+    <p>The following is the definition of Binary Search Tree(BST) according to <span><a href="https://en.wikipedia.org/wiki/Binary_search_tree">Wikipedia</a></span> 
+        Binary Search Tree is a node-based binary tree data structure which has the following properties:</p>
+       <br>
+       <ul id="order">
+           <li>The left subtree of a node contains only nodes with keys lesser than the node’s key.</li>
+           <li>The right subtree of a node contains only nodes with keys greater than the node’s key.</li>
+           <li>The left and right subtree each must also be a binary search tree. 
+            There must be no duplicate nodes.</li>
+       </ul> 
+<br>
+<img style="margin-left: 50px; margin-bottom: 10px;" src="picture\BSTSearch.png" alt="" title="BST Tree">    
+<br>
+<h3 style="color: green; margin-left: 50px;">Searching a key For searching a value:-</h3> <br>
+<p id="para2"> 
+    if we had a sorted array we could have performed a binary search. Let’s say we want to search a number in the array what we do in binary search is we first define the complete list as our search space, the number can exist only within the search space. Now we compare the number to be searched or the element to be searched with the mid element of the search space or the median and if the record being searched is lesser we go searching in the left half else we go searching in the right half, in case of equality we have found the element. In binary search we start with ‘n’ elements in search space and then if the mid element is not the element that we are looking for, we reduce the search space to ‘n/2’ and we go on reducing the search space till we either find the record that we are looking for or we get to only one element in search space and be done with this whole reduction. 
+    Search operation in binary search tree will be very similar. Let’s say we want to search for the number, what we’ll do is we’ll start at the root, and then we will compare the value to be searched with the value of the root if it’s equal we are done with the search if it’s lesser we know that we need to go to the left subtree because in a binary search tree all the elements in the left subtree are lesser and all the elements in the right subtree are greater. Searching an element in the binary search tree is basically this traversal in which at each step we will go either towards left or right and hence in at each step we discard one of the sub-trees. If the tree is balanced, we call a tree balanced if for all nodes the difference between the heights of left and right subtrees is not greater than one, we will start with a search space of ‘n’nodes and when we will discard one of the sub-trees we will discard ‘n/2’ nodes so our search space will be reduced to ‘n/2’ and then in the next step we will reduce the search space to ‘n/4’ and we will go on reducing like this till we find the element or till our search space is reduced to only one node. The search here is also a binary search and that’s why the name binary search tree.</p>
+   
+</div>
+<br>
+<h2 style="margin-left: 50px; color: blue;">CODE FOR SEARCHING A KEY FOR SEARCHING A VALUE:-</h2>
+<br>
+<button id="showCode">Show-Code</button>
+<br>
+
+<div id="codeContainer">
+    
+<div id="code1">
+   
+    <button id="java">#java</button>
+    <pre style="margin-left: 50px; color: green; font-weight: bold;">// C function to search a given key in a given BST 
+    
+        struct node* search(struct node* root, int key)
+         { 
+             // Base Cases: root is null or key is present at root 
+             if (root == NULL || root->key == key) 
+                return root; 
+              
+             // Key is greater than root's key 
+             if (root->key < key) 
+                return search(root->right, key); 
+           
+             // Key is smaller than root's key 
+             return search(root->left, key); 
+         }</pre>
+</div>
+<div id="code2">
+    <button id="c">#C</button>
+    
+    <pre style="margin-left: 50px; color: darkgreen; font-weight: bold;">// java function to search a given key in a given BST 
+       
+        public Node search(Node root, int key) 
+        { 
+            // Base Cases: root is null or key is present at root 
+            if (root==null || root.key==key) 
+                return root; 
+          
+            // Key is greater than root's key 
+            if (root.key < key) 
+               return search(root.right, key); 
+          
+            // Key is smaller than root's key 
+            return search(root.left, key); 
+        } </pre>
+</div>
+
+</div>
+
+<ol id="order" style="margin-top: 15px; margin-bottom: 15px;">
+    <li>Start from the root. </li>
+    <li>Compare the searching element with root, if less than root, then recurse for left, else recurse for right.</li>
+    <li>If the element to search is found anywhere, return true, else return false. </li>
+</ol> 
+
+<img style="margin-left: 50px; margin-bottom: 10px;" src="picture/BSTSearch 2.png" alt="" title="BST Tree">  
+
+<h3 style="margin-left: 50px; color: green;">Insertion of a key:- </h3>
+
+<p style="margin-left:50px; width: 800px; text-align: justify;">
+    A new key is always inserted at the leaf. We start searching a key from the root until we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node. </p>
+    <br>
+    <button id="showCode2">Show-Code</button>
+    <br>
+    
+
+
+    <div id="codeContainer1">
+    
+        <div id="insertion1">
+           
+            <button id="java1">#java</button>
+            <pre style="margin-left: 50px; color: green; font-weight: bold;">// C function for Insertion of a key  in a given BST 
+                // C program to demonstrate insert 
+                // operation in binary 
+                // search tree. 
+                #include <stdio.h> 
+                #include <stdlib.h> 
+                  
+                struct node { 
+                    int key; 
+                    struct node *left, *right; 
+                }; 
+                  
+                // A utility function to create a new BST node 
+                struct node* newNode(int item) 
+                { 
+                    struct node* temp 
+                        = (struct node*)malloc(sizeof(struct node)); 
+                    temp->key = item; 
+                    temp->left = temp->right = NULL; 
+                    return temp; 
+                } 
+                  
+                // A utility function to do inorder traversal of BST 
+                void inorder(struct node* root) 
+                { 
+                    if (root != NULL) { 
+                        inorder(root->left); 
+                        printf("%d \n", root->key); 
+                        inorder(root->right); 
+                    } 
+                } 
+                  
+                /* A utility function to insert 
+                   a new node with given key in 
+                 * BST */
+                struct node* insert(struct node* node, int key) 
+                { 
+                    /* If the tree is empty, return a new node */
+                    if (node == NULL) 
+                        return newNode(key); 
+                  
+                    /* Otherwise, recur down the tree */
+                    if (key < node->key) 
+                        node->left = insert(node->left, key); 
+                    else if (key > node->key) 
+                        node->right = insert(node->right, key); 
+                  
+                    /* return the (unchanged) node pointer */
+                    return node; 
+                } 
+                  
+                // Driver Code 
+                int main() 
+                { 
+                    /* Let us create following BST 
+                              50 
+                           /     \ 
+                          30      70 
+                         /  \    /  \ 
+                       20   40  60   80 */
+                    struct node* root = NULL; 
+                    root = insert(root, 50); 
+                    insert(root, 30); 
+                    insert(root, 20); 
+                    insert(root, 40); 
+                    insert(root, 70); 
+                    insert(root, 60); 
+                    insert(root, 80); 
+                  
+                    // print inoder traversal of the BST 
+                    inorder(root); 
+                  
+                    return 0; 
+                }</pre>
+        </div>
+
+
+        <div id="insertion2">
+            <button id="c1">#C</button>
+            
+            <pre style="margin-left: 50px; color: darkgreen; font-weight: bold;">//java function for Insertion of a key  in a given BST 
+               
+                // Java program to demonstrate  
+                // insert operation in binary 
+                // search tree 
+                class BinarySearchTree { 
+                  
+                    /* Class containing left  
+                       and right child of current node 
+                     * and key value*/
+                    class Node  
+                    { 
+                        int key; 
+                        Node left, right; 
+                  
+                        public Node(int item) 
+                        { 
+                            key = item; 
+                            left = right = null; 
+                        } 
+                    } 
+                  
+                    // Root of BST 
+                    Node root; 
+                  
+                    // Constructor 
+                    BinarySearchTree()  
+                    {  
+                         root = null;  
+                    } 
+                  
+                    // This method mainly calls insertRec() 
+                    void insert(int key)  
+                    {  
+                         root = insertRec(root, key);  
+                    } 
+                  
+                    /* A recursive function to  
+                       insert a new key in BST */
+                    Node insertRec(Node root, int key) 
+                    { 
+                  
+                        /* If the tree is empty, 
+                           return a new node */
+                        if (root == null)  
+                        { 
+                            root = new Node(key); 
+                            return root; 
+                        } 
+                  
+                        /* Otherwise, recur down the tree */
+                        if (key < root.key) 
+                            root.left = insertRec(root.left, key); 
+                        else if (key > root.key) 
+                            root.right = insertRec(root.right, key); 
+                  
+                        /* return the (unchanged) node pointer */
+                        return root; 
+                    } 
+                  
+                    // This method mainly calls InorderRec() 
+                    void inorder()  
+                    {  
+                         inorderRec(root);  
+                    } 
+                  
+                    // A utility function to  
+                    // do inorder traversal of BST 
+                    void inorderRec(Node root) 
+                    { 
+                        if (root != null) { 
+                            inorderRec(root.left); 
+                            System.out.println(root.key); 
+                            inorderRec(root.right); 
+                        } 
+                    } 
+                  
+                    // Driver Code 
+                    public static void main(String[] args) 
+                    { 
+                        BinarySearchTree tree = new BinarySearchTree(); 
+                  
+                        /* Let us create following BST 
+                              50 
+                           /     \ 
+                          30      70 
+                         /  \    /  \ 
+                       20   40  60   80 */
+                        tree.insert(50); 
+                        tree.insert(30); 
+                        tree.insert(20); 
+                        tree.insert(40); 
+                        tree.insert(70); 
+                        tree.insert(60); 
+                        tree.insert(80); 
+                  
+                        // print inorder traversal of the BST 
+                        tree.inorder(); 
+                    } 
+                } </pre>
+        </div>
+        
+        </div>
+
+</div>
+
+<script>
+
+//selector
+var c=document.getElementById("c");
+var java=document.getElementById("java");
+var insertion1=document.getElementById("insertion1");
+var insertion2=document.getElementById("insertion2");
+var showcode2=document.getElementById("showCode2");
+var codeContainer1=document.getElementById("codeContainer1");
+
+var c1=document.getElementById("c1");
+var java1=document.getElementById("java1");
+var code1=document.getElementById("code1");
+var code2=document.getElementById("code2");
+var showcode=document.getElementById("showCode");
+var codeContainer1=document.getElementById("codeContainer2");
+//fuction
+
+showcode.onclick=function()
+{
+    code1.style.visibility="visible";
+    code2.style.visibility="hidden";
+    
+    
+}
+c.onclick=function()
+{
+    code1.style.visibility="visible";
+    code2.style.visibility="hidden";
+}
+java.onclick=function()
+{
+    code2.style.visibility="visible";
+    code1.style.visibility="hidden";
+}
+
+
+
+showcode2.onclick=function()
+{
+    insertion1.style.visibility="visible";
+    insertion2.style.visibility="hidden";
+    
+}
+c1.onclick=function()
+{
+    insertion1.style.visibility="visible";
+    insertion2.style.visibility="hidden";
+}
+java1.onclick=function()
+{
+    insertion2.style.visibility="visible";
+    insertion1.style.visibility="hidden";
+}
+
+
+
+</script>
+
+
+
+<!-- content of Daa intro  -->
+
+<!-- footer -->
+
+<div class="footer">
+   
+    <footer>
+        <section class="sec-1">
+
+            <section class="about">
+                <h3>About</h3>
+                <p style="overflow:hidden;">The physical classroom learning nowadays is no longer 
+                    applicable for the current younger generations (Gen Y). In an 
+                    era known as the society of technology and knowledge, where 
+                    lifelong learning is a way of life, we are developing a website 
+                    named as “study point” for goal of finding effective ways of 
+                    providing new learning material. The project is a Java based 
+                    project developed with the help of Java, HTML and CSS .This 
+                    E-learning website includes computer based learning. This E-
+                    learning website provide knowledge to the students about 
+                    various topics and in an effort to make learning more 
+                    efficient, equitable and innovative. It provides efficiency and 
+                    effectiveness in providing education to the students .This 
+                    website has no registered user, any guest user can take 
+                    advantage of it.</p>
+            </section>
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li> <a href="#">C</a> </li>
+                    <li> <a href="#">UI Design</a> </li>
+                    <li> <a href="#">PHP</a> </li>
+                    <li> <a href="#">Java</a> </li>
+                    <li> <a href="#">Android</a> </li>
+                    <li> <a href="#">Templates</a> </li>
+                    
+                </ul>
+            </section>
+            <section class="quick-links">
+                <h3>Quick-links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                   
+                </ul>
+            </section>
+            <section class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li> <a href="#"> <i class="fa fa-home"></i> <span>GLA University mathura UP,India</span> </a></li>
+                    <li> <a href="#"> <i class="fa fa-envelope-o"></i> <span>studyPoint@gmail.com</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-mobile"></i> <span>90******35</span></a></li>
+                    <li> <a href="#"> <i class="fa fa-facebook"></i><span>StudyPoint</span> </a></li>
+                </ul>
+            </section>
+
+        </section>
+       
+        <section class="sec-2">
+            <h3>Register for Free</h3>
+            <a href="#">Signup!</a>
+
+        </section>
+
+        
+
+        <section class="sec-3">
+           <a href="#" class="facebook" ><i class="fa fa-facebook" ></i></a> 
+           <a href="#" class="twitter"><i class="fa fa-twitter" ></i></a> 
+           <a href="#" class="google" ><i class="fa fa-google" ></i></a> 
+           <a href="#" class="linkedin" ><i class="fa fa-linkedin" ></i></a> 
+           <a href="#" class="dribbble" ><i class="fa fa-dribbble" ></i></a> 
+        </section>
+        
+        <section class="sec-4">
+            <p>Copyright @ 2020 All Rights Reserved by <span> <a href="#">Study Point</a></span> </p>
+        </section>
+    </footer>
+</div> 
+      
+</body>
+</html>

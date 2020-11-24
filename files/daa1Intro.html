@@ -23,7 +23,7 @@
 {
     border:0px solid red;
     position: relative;
-    height: 5000px;
+    height: 2400px;
 
 }
 .header
@@ -188,12 +188,15 @@ i
 {
     opacity: 0;
 }
-#chk:checked ~ .sidebar
+#chk:checked ~ .sidebar,.DAAcontainer
 {
     
     left: 0%;
 }
-
+#chk:checked ~ .DAAcontainer
+{
+    margin-left: 200px;
+}
 #chk:checked ~ .hide-btn
 {
     opacity: 1;
@@ -514,7 +517,42 @@ i
     
 }
 
+#order li
+{
+    list-style-type:square;
+    margin-left: 70px;
+    color: black;
+    width: 50rem;
+}
+#links li
+{
+    list-style-type:square;
+    margin-left: 70px;
+    
+    width: 50rem;
+    color: yellow;
+}
+.book
+{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: space-between;
+}
    
+   .b1,b2,b3,b4
+   {
+      
+       margin-left: 10px;
+   }
+
+   .b1 a img,.b2 a img,.b3 a img,.b4 a img
+   {
+       height: 350px;
+       width: 280px;
+
+   }
+
     </style>
 
 
@@ -562,7 +600,83 @@ i
     <br>
     
 <!-- content of daa intro programming -->
-<img title="C programming" style=" height: 20rem; width: 70rem; display: block; margin-left:50px; margin-right: auto; margin-top: 100px;" src="picture/daa1.jpg" alt="">
+<div class="DAAcontainer">
+    <img title="DAA" style=" height: 20rem; width: 30rem; display: block; margin-left:150px; margin-right: auto; margin-top: 100px;" src="picture/daa1.png" alt="">
+
+<h1 style="display: block; margin-left: 50px; color: green;">What is DAA:-</h1>
+<br>
+<p style="font-size: 20px; margin-left: 50px; text-align: justify; width: 50rem;">   Design and Analysis of Algorithms:- 
+    An algorithm is a set of steps of operations to solve a problem performing calculation, 
+    data processing, and automated reasoning tasks. An algorithm is an efficient method that 
+    can be expressed within finite amount of time and space.An algorithm is the best way to 
+    represent the solution of a particular problem in a very simple and efficient way.
+    If we have an algorithm for a specific problem, then we can implement it in any programming 
+    language, meaning that the algorithm is independent from any programming languages.
+</p>
+<br>
+<h1 style="display: block; margin-left: 50px; color: green;">What is the need of data structures?</h1>
+<br>
+<p style="font-size: 20px; margin-left: 50px; text-align: justify; width: 50rem;">   Data structures are used as a framework for organizing and storing information in virtual memory forms. In computing, RAM and virtual memory, such as the Cloud or other shared storage systems, store large quantities of data rapidly and efficiently. However, there is a twofold dilemma: first, how can it be stored efficiently, and second, how will we be able to retrieve it over time if it’s just stored away in cyberspace?
+
+    Data structures are the solution to these dilemmas. Data structures organize and prioritize information into datasets and databases that can be compressed efficiently to save storage space. These organizational structures are also structured logically so that retrieving information from them is simple and straightforward, making the data usable once more.
+</p>
+<br>
+<h1 style="display: block; margin-left: 50px; color: green;">Advantages of data structure:-</h1>
+<br>
+
+<ul id="order">
+    <pre style="margin-left: 50px;">Given below are important advantages of data structure:</pre>
+    <li>Data structure helps in efficient storage of data in storage device.</li>
+    
+    <li>Data structure usage provides convenience while retrieving the data from storage device.</li>
+    <li>Data structure provides effective and efficient processing of small as well as large amount of data.</li>
+    <li>Usage of proper data structure, can help programmer save lots of time or processing time while operations such as storage, retrieval or processing of data.</li>
+    <li>Manipulation of large amount of data can be carried out easily with the use of good data structure approach.</li>
+    <li>Most of the well organized data structures like Array, stack, queues, graph, tree, linked list has well built and pre-planned approach for operations like storage, addition, retrieval, manipulation, deletion, etc. While using them, programmer can be completely rely on these data structures.</li>
+    <li>Data structure usage can simply encourage reusability in long run as well.</li>
+</ul>
+
+<br>
+<h1 style="display: block; margin-left: 50px; color: green;">Disadvantages of data structure:-</h1>
+<br>
+<ul id="order">
+    <pre style="margin-left: 50px;">Given below are important disadvantages of data structure:</pre>
+    <li>An application using data structure requires highly qualified professional resource to manage the operations related to data structure.</li>    
+    <li>Bigger the application or data structure involved in creating and maintaining application more is the requirement of man power. This can increase maintaining data structure costs.</li>    
+    <li>Designing your own data structure may involve complex algorithm and may require lot of time and testing to conclude they are full-proof and ready to use for organization purpose.</li>    
+</ul>
+<br>
+
+<h3 style="display: block; margin-left: 50px; color: green;">Importants topics are:- </h3>
+<ul id="links">
+<li><a href="#">Arrays</a></li>
+<li><a href="#">Linked-List</a></li>
+<li><a href="#">Stacks</a></li>
+<li><a href="#">Queues</a></li>
+<li><a href="#">Hash Table</a></li>
+<li><a href="#">Trees</a></li>
+<li><a href="#">Heaps</a></li>
+
+</ul>
+
+<br>
+<h3 style="display: block; margin-left: 50px; color: green;">books Suggestions for Daa:- </h3>
+<br>
+<div class="book">
+    <div class="b1"><a href="https://www.pearson.com/us/higher-education/program/Lafore-Data-Structures-and-Algorithms-in-Java-2nd-Edition/PGM32075.html">
+        <img src="picture/daaBook1.jpg" alt=""></a></div>
+    <div class="b2"><a href="https://www.amazon.in/Data-Structures-Algorithms-USING-C-ebook/dp/B01L0B2EJC">
+        <img src="picture/daaBook2.png" alt=""></a></div>
+    <div class="b3"><a href="https://www.pdfdrive.com/data-structures-with-c-by-schaum-lipschutz-e163862812.html">
+        <img src="picture/daaBook2.webp" alt=""></a></div>
+    <div class="b4"><a href="https://www.kopykitab.com/Data-Structures-And-Algorithms-For-SPPU-by-A-A-Puntambekar-Dr-P-N-Mahalle">
+        <img src="picture/daaBook3.jpg" alt=""></a></div>
+</div>
+
+</div>
+
+
+
 
 <!-- content of daa intro programming -->
 
