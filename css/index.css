@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python 2</title>
-    <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <style>
 *
 {
     padding:0;
@@ -15,7 +5,13 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+body {
+  background-image: url('picture/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  
+}
 
 
 
@@ -23,14 +19,14 @@
 {
     border:0px solid red;
     position: relative;
-    height: 850px;
+    height: 5000px;
 
 }
 .header
 {
     height: 70px;
     width: 100%;
-    z-index: 5;
+    
     background: linear-gradient(to right,lightgreen,green);
        
     display: flex;
@@ -140,13 +136,13 @@
 
 .rightbar
 {
-    z-index:3;
     display: block;
-    position: absolute;
+     position: fixed; 
+   
     right: 0;
     top: 70px;
     width: 20%;
-    height: 730px;
+    height: 700px;
     background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
    
 }
@@ -257,9 +253,8 @@ i
 
 .footer
 {
-    display:none;
     position: sticky;
-    top: 4000px;       
+    top: 300px;       
 
 }
 .content
@@ -355,7 +350,7 @@ i
              /* background-color:  rgb(54, 53, 53); */
              background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
    
-           
+             /* flex-direction: ; */
          }
          
 
@@ -460,205 +455,34 @@ i
              width: 100%;
          }
 
-         .Pcontent ul li{
-        list-style: circle;
-        color: black;
-        margin-left: 40px;
-         }
-         .Pcontent ol li{
-        list-style-type: lower-alpha;
-        color: black;
-        margin-left: 40px;
-         }
-         .Pcontent
-         {
-             z-index: 2;
-            position: relative;
-            padding: 10px;
-            height: 700px;
-            top: 80px;
-            left: 100px;
-            width: 70%; 
-           overflow:auto;
-            border: 2px solid black;
-         }
-         .mybut button{
-    display:inline-block;
-    width:100px;
-    height:30px;
-    border-radius:20px;
-    color:white;
-    background-color:orange;
-    border:none;
-    
-}
-.mybut a{
-    text-decoration:none;
-    color:white;
-}
-.mybut .next{
-float:right;
+
+.content1 h1
+{
+
+    position: fixed;
+    top: 200px;
+    color: aliceblue;
+    left: 350px;
+    font-size: 35px;
+    background-color: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
 }
 
-        .Pcontent h3 
-        {  
-   
-            color: rgb(13, 13, 14); 
-  
-        } 
 
+.button a
+{
+    position: fixed;
+    top: 300px;
+    left: 600px;
+    border-radius: 10px;
+    background: linear-gradient(to right,white,green);
+    padding: 10px 10px;
 
-        #search input{
-       position:relative;
-        left:500px;
-        width:200px;
-        height:40px;
-    }
-    .fa-search{
-        position:relative;
-        left:510px;
-        color:white;
-    
-    }
-    </style>
+}
 
-
-</head>
-<body>
- 
- <div class="container">   
-    <div class="header">
-        
-        <h1>Study <sub>Point</sub></h1>
-        <form action="../php/search.php" method="POST" id="search">
-            <input type="search" name="searchcontent" placeholder="Search here">
-             <i class="fa fa-search"></i>
-            </form>
-    </div>
-     
-    <input type="checkbox" id="chk">
-    <label for="chk" class="show-btn">
-        <i class="fa fa-bars"></i>
-    </label>
-   
-    <label for="chk" class="hide-btn">
-        <i class="fa fa-times"></i>
-    </label>
-    <div class="sidebar">
-        <ul>
-            <li><a href="../index.html"><i class="fa fa-home"><span>home</span></i></a></li>
-            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
-            <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
-            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
-        </ul>
-       <div class="social" id="social1">
-           <a href="#"><i class="fa fa-facebook-square"></i></a>
-           <a href="#"><i class="fa fa-youtube-square"></i></a>
-           <a href="#"><i class="fa fa-instagram"></i></a>
-       </div>
-    </div>
-
-    <!-- right Side -->
-    <div class="rightbar">
-        <ul>
-            <li><a href="python1.php"><i class="fa fa-tasks"><span> Introduction to python</span></i></a></li>
-            <li><a href="python2.html"><i class="fa fa-tasks"><span> Advantage of python programming</span></i></a></li>
-           <li><a href="../index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
-           <li><a href="../php/logout.php"><i class="fa fa-id-card"><span> logout</span></i></a></li>
-        </ul>
-      
-    </div>
-    <br>
-    
-<!-- content of C intro programming -->
-
-<div class="Pcontent" style ="text-align:justify"> 
-    <h1>Advantages Of Python Programming:</h1><br>
-
- 
-
-        <ul>
-
-            <li>Presence of third-party modules</li> <br>
-
-            <li>Extensive support libraries(NumPy for numerical calculations, Pandas for data analytics etc)</li><br>
-
-            <li> Open source and community development</li><br>
-
-            <li>Easy to learn</li><br>
-
-            <li>User-friendly data structures</li><br>
-
-            <li>High-level language</li><br>
-
-            <li>Dynamically typed language(No need to mention data type based on value assigned, it takes data type)</li><br>
-
-            <li> Object-oriented language</li><br>
-
-            <li> Portable and Interactive</li><br>
-
-            <li>Portable across Operating systems</li><br>
-
-        </ul>
-
-    
-
-<h1>Applications :</h1><br>
-
-   
-
-         <ol>
-
-             <li>GUI based desktop applications(Games, Scientific Applications)</li><br>
-
-             <li> Web frameworks and applications</li><br>
-
-             <li> Enterprise and Business applications</li><br>
-
-             <li>Operating Systems</li><br>
-
-             <li>Language Development</li><br>
-
-             <li>Prototyping</li>     <br>           
-
-         </ol>
-
-    
-
-     <!-- /*2nd page*/ -->
-
-<h1>Variable Names</h1><br>
-
-    A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).<br><br>
-
-<h1>Rules for Python variables:</h1><br>
-
-
-    <ol>
-
-        <li>A variable name must start with a letter or the underscore character</li><br>
-
-        <li>A variable name cannot start with a number</li><br>
-
-        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li><br>
-
-        <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li><br>
-
-     </ol>  <br><br>
-     <br><br>
-     <div class="mybut">
-        <button class="pre"><a href="python1.php"> previous</button>
-        <button class="next"><a href="python2.html"> Next </a> </button>
-        </div>
-
-        </div> 
-
- 
-</div>
-
-
-
-      
-</body>
-</html>
+input[type='text']
+{
+    position: relative;
+    width: 250px;
+    left: 520px;
+    padding: 10px 10px;
+}

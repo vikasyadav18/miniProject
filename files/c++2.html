@@ -23,7 +23,7 @@
 {
     border:0px solid red;
     position: relative;
-    height: 5000px;
+    height: 850px;
 
 }
 .header
@@ -257,7 +257,7 @@ i
 /* footer */
 
 .footer
-{
+{display: none;
     position: sticky;
     top: 4000px;       
 
@@ -355,7 +355,7 @@ i
              /* background-color:  rgb(54, 53, 53); */
              background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
    
-             flex-direction: ;
+             
          }
          
 
@@ -420,7 +420,12 @@ i
         {
             background-color: pink;
         }
-
+        .Ccontent ul li{
+list-style: circle;
+color: black;
+margin-left: 40px;
+margin:10px;
+         }
 
          
          .sec-4
@@ -466,7 +471,7 @@ i
 
          .Clist li
          {
-             color:rgb(153, 0, 255) ;
+             color:rgb(23, 23, 24) ;
          }
 
          .Ccontent
@@ -475,14 +480,18 @@ i
             position: relative;
             top: 80px;
             left: 100px;
-            width: 60%; 
+            width: 70%;
+            height: 700px;
+            overflow: auto;
+            padding: 20px;
+            border:2px solid black; 
          }
         
 
         .Ccontent h3 
         {  
    
-            color: rgb(153, 0, 255); 
+            color: rgb(19, 18, 19); 
   
         } 
 
@@ -492,7 +501,37 @@ i
   border-collapse: collapse;  
 } 
 
-
+.mybut button{
+    display:inline-block;
+    width:100px;
+    height:30px;
+    border-radius:20px;
+    color:white;
+    background-color:orange;
+    border:none;
+}
+.mybut a{
+    text-decoration:none;
+    color:white;
+}
+.mybut .next{
+float:right;
+}
+#search input{
+    position:relative;
+     left:500px;
+     width:200px;
+     height:40px;
+ }
+ .fa-search{
+     position:relative;
+     left:510px;
+     color:white;
+ 
+ }
+ .footer{
+    display:none;
+}
    
     </style>
 
@@ -504,6 +543,10 @@ i
     <div class="header">
         
         <h1>Study <sub>Point</sub></h1>
+        <form action="../php/search.php" method="POST" id="search">
+            <input type="search" name="searchcontent" placeholder="Search here">
+             <i class="fa fa-search"></i>
+            </form>
     </div>
      
     <input type="checkbox" id="chk">
@@ -516,7 +559,7 @@ i
     </label>
     <div class="sidebar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-home"><span>home</span></i></a></li>
+            <li><a href="../index.html"><i class="fa fa-home"><span>home</span></i></a></li>
             <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
             <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
             <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
@@ -532,9 +575,10 @@ i
     <!-- right Side -->
     <div class="rightbar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++1.html"><i class="fa fa-tasks"><span>Learn C++</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++2.html"><i class="fa fa-tasks"><span>Application and classes of C++</span></i></a></li>
-           <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
+            <li><a href="files/c++.php"><i class="fa fa-tasks"><span> C++</span></i></a></li>
+            <li><a href="files/c++2.html"><i class="fa fa-tasks"><span>Application and classes of C++</span></i></a></li>
+           <li><a href="../index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
+           <li><a href="../php/logout.php"><i class="fa fa-id-card"><span> logout</span></i></a></li>
         </ul>
       
     </div>
@@ -546,8 +590,8 @@ i
 <div style="text-align:justify" class="Ccontent">
 
 <h1>C++ Classes</h1>
-    <h3>
-        <ul class="Clist">
+    
+        <ul>
             <li> C++ OOP</li>
             <li> C++ Classes/Objects</li>
             <li> C++ Class Methods</li>
@@ -559,12 +603,12 @@ i
             <li> C++ Files</li>
             <li> C++ Exceptions</li>
         </ul>
-    </h3>
+    
 <h1>Applications of C++</h1>
-<h3>
+
 Using C++, you can develop system software like OS, Device Drivers, Network(N/W) protocols, PC – utilities.<br>
 Application software you can develop application like:<br><br>
-    <ul  class="Clist">
+    <ul>
         <li> Database</li>
         <li> Word processing</li>
         <li> Spreadsheets</li>
@@ -572,11 +616,11 @@ Application software you can develop application like:<br><br>
         <li> General purpose means it is suitable for developing any software.</li>
         <li> CUI means a character user interface.</li>
     </ul>
-</h3>
+
 
 <h1>Advantages of C++</h1>
-<h3>
-    <ul class="Clist">
+
+    <ul>
         <li> Object oriented</li>
         <li> Portable language (writing a program irrespective of operating system as well as Hardware)</li>
         <li> Low-level language like Assembly language on Machine language called portable.</li>
@@ -589,10 +633,10 @@ Application software you can develop application like:<br><br>
         <li> C++ used reusability of code.</li>
         <li> C++ used inheritance, polymorphism.</li>
     </ul>
-</h3>
+
 <h1>Disadvantages of C++</h1>
-<h3>
-    <ul class="Clist">
+
+    <ul>
         <li> It has no security</li>
         <li> Complex in a very large high-level program.</li>
         <li> Used for platform specific application commonly.</li>
@@ -602,11 +646,11 @@ Application software you can develop application like:<br><br>
         <li> C++ is not secure because it has a pointer, friend function, and global variable.</li>
         <li> No support for threads built in.</li>
     <ul>
-</h3>
+
 <h1>MAIN FEATURES OF C++</h1>
-<h3>
+
 There are various features of C++ such as:<br><br>
-    <ul class="Clist">
+    <ul>
         <li> Object Oriented.</li>
         <li> Simple.</li>
         <li> Platform Dependent.</li>
@@ -616,7 +660,12 @@ There are various features of C++ such as:<br><br>
         <li> Memory Management.</li>
         <li> Powerful & Fast</li>
      </ul>
-</h3>        
+
+     <div class="mybut">
+        <button class="pre"><a href="c++.php"> previous</button>
+        <button class="next"><a href="c++2.html"> Next </a> </button>
+        </div>
+        
 </div>
 
 <!-- content of C intro programming -->
