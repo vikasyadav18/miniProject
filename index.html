@@ -6,7 +6,6 @@
     <title>Index</title>
     <!-- <link rel="stylesheet" href="leftsidebar.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
     <style>
 *
 {
@@ -16,10 +15,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-image: url('picture/background.jpg');
+  background-image: url('picture/edu1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size:cover;
+ background-size: cover;
   
 }
 
@@ -27,9 +26,14 @@ body {
 
 .container
 {
+
     border:0px solid red;
     position: relative;
     height: 2500px;
+
+    
+    height: 600px;
+
 
 }
 .header
@@ -43,6 +47,7 @@ body {
     position: fixed;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 
 }
 .header img
@@ -62,6 +67,7 @@ body {
     
     width: 100%;
     padding: 20px;
+    border:2px solid black;
 
 }
 .content1 img
@@ -148,15 +154,20 @@ body {
 {
     z-index:3;
     display: block;
+
     position: absolute;
-   
+
+     position: absolute; 
+   z-index: 0;
+
     right: 0;
     top: 70px;
     width: 20%;
-    height: 700px;
+    height: 500px;
     background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
    
 }
+
 
 .social
 {
@@ -188,7 +199,11 @@ i
     position: fixed;
     top: 20px;
     left: 40px;
+<<<<<<< HEAD
     z-index: 6;
+=======
+    z-index: 4;
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
 }
 
 .hide-btn
@@ -263,21 +278,17 @@ i
 
 /* footer */
 
-.footer
-{
-    position: sticky;
-    top: 300px;       
 
-}
 .content
          {
-             position: absolute;
+             /* position: absolute; */
            display: block;
             justify-content: center;
             color: rgb(110, 109, 109) !important;
             border: 2 px solid white;
-            bottom: 0px;
-            left: 0;
+            /* bottom: 0px;
+            left: 0; */
+            border:4px solid rgb(81, 0, 128);
          }
 
          .sec-1
@@ -361,8 +372,13 @@ i
              border-bottom:2px solid rgb(134, 129, 129) ;
              /* background-color:  rgb(54, 53, 53); */
              background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
+<<<<<<< HEAD
             
             
+=======
+   
+             /* flex-direction: ; */
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
          }
          
 
@@ -370,7 +386,6 @@ i
          {
             text-transform: inherit !important;
              color: rgb(145, 137, 137) !important;
-             
          }
 
          .sec-2 a
@@ -472,20 +487,30 @@ i
 .content1 h1
 {
 
-    position: fixed;
+     position: absolute;
     top: 200px;
+<<<<<<< HEAD
     color:whitesmoke;
+=======
+    color: aliceblue;
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
     left: 350px;
     font-size: 35px;
     background-color: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
 }
 
 
-.button a
-{
-    position: fixed;
+.button{
+    position: absolute;
     top: 300px;
     left: 600px;
+    
+z-index:0;
+}
+.button a
+{
+  
+   
     border-radius: 10px;
     /* background: linear-gradient(to right,white,green); */
     padding: 10px 10px;
@@ -493,32 +518,19 @@ i
 
 }
 
-input[type='text']
+input[type='search']
 {
     position: relative;
     width: 250px;
-    left: 520px;
+    left: 460px;
     padding: 10px 10px;
 }
-
-#myContainer {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 150px;
-  left: 450px;
-  position: relative;
-  background: transparent;
+.fa-search{
+    position: relative;
+    left: 460px;
+    padding: 10px 10px; 
 }
-#myAnimation {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  z-index: -1;
-  
-}
+<<<<<<< HEAD
 .button a
 {
 width: 90px;
@@ -541,13 +553,52 @@ z-index: 4;
 color:yellow;
 /* text-decoration:none; */
 
+=======
+.logout{
+    position: relative;
+    left: 460px;
+    margin-right: 20px; 
+    font-size: 18px;
+    
 }
+.logout a{
+    color:blue;
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
+}
+.logout:hover{
+    border-bottom: 2px solid white;
+}
+.fa-search:hover{
+    transform: scale(1.3);
+    color: blue;
+}
+.mycards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .mycards .cards{
+  
+    width: 250px;
+    height:280px;
+    border-radius: 20px;
+    margin: 30px;
 
-
-
-    </style>
-
-
+background-color: orange;
+}
+.mycards .cards img{
+width: 100%;
+height: 150px;
+border-radius: 20px;
+display: block;
+margin-bottom: 10px;
+}
+.cards p{
+    padding:5px;
+    text-align: justify;
+    /* border: 1px solid green; */
+}
+        </style>
 </head>
 <body>
  
@@ -555,7 +606,11 @@ color:yellow;
 
     <div class="header">
         <h1>Study <sub>Point</sub></h1>
-        <input type="text" placeholder="Search here">
+        <a href="php/logout.php" class="logout"><i class="fa fa-id-card"><span> Log out</span></i></a>
+        <form action="php/search.php" method="POST">
+        <input type="search" name="searchcontent" placeholder="Search here">
+         <i class="fa fa-search"></i>
+        </form>
     </div>
      
     <input type="checkbox" id="chk">
@@ -568,11 +623,12 @@ color:yellow;
     </label>
     <div class="sidebar">
         <ul>
-            <li><a href="#"><i class="fa fa-home"><span>home</span></i></a></li>
-            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
-            <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
-            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+            <li><a href="index.html"><i class="fa fa-home"><span> home</span></i></a></li>
+            <li><a href="files/aboutus.html"><i class="fa fa-user"><span> About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span> services</span></i></a></li>
+            
+            <li><a href="files/contact.html"><i class="fa fa-id-card"><span> Contact</span></i></a></li>
+            
         </ul>
        <div class="social" id="social1">
            <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -582,8 +638,9 @@ color:yellow;
     </div>
 
     <!-- right Side -->
-    <div class="rightbar">
+    <div class="rightbar" id="rightsidebar">
         <ul>
+<<<<<<< HEAD
             <li><a href="https://vikasyadav18.github.io/miniProject/files/daa1Intro.html"><i class="fa fa-tasks"><span>Data Structure</span></i></a></li>
             <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C-Introduction</span></i></a></li>
             <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C-programming</span></i></a></li>
@@ -594,17 +651,32 @@ color:yellow;
             <li><a href="#"><i class="fa fa-tasks"><span>Learn HTML</span></i></a></li>
             <li><a href="#"><i class="fa fa-tasks"><span>Learn Java</span></i></a></li>
             <li><a href="#"><i class="fa fa-rss"><span>More</span></i></a></li>
+=======
+            <li><a href="files/java1.php"><i class="fa fa-tasks"><span> Java</span></i></a></li>
+            <li><a href="files/C.php"><i class="fa fa-tasks"><span> C-programming</span></i></a></li>
+            <li><a href="files/python1.php"><i class="fa fa-tasks"><span> Python</span></i></a></li>
+            
+            <li><a href="files/c++.php"><i class="fa fa-tasks"><span> C++</span></i></a></li>
+            
+            <li><a href="files/html1.php"><i class="fa fa-tasks"><span> HTML</span></i></a></li>
+              <li><a href="index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
         </ul>
       
     </div>
     <br>
+<<<<<<< HEAD
     <img src="D:\miniproject\files\picture\background.jpg" alt="" style="background-size:cover; width:100%;height: 100%;" >
  
     <div class="content1">
+=======
+    <div class="content1" >
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
 
            <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
     </div>
 
+<<<<<<< HEAD
     <div class="button">
         <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a>
     </div>
@@ -636,9 +708,44 @@ color:yellow;
           }
         }
         </script> -->
+=======
+    <div class="button" >
+        <!-- <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a> -->
+        <a href="files/signIn.html" ><sub>let's</sub>JOIN</a>
+    
+    </div>
+
+<!-- 
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div> -->
+>>>>>>> 058b0a702b11f5177e6c6e92283f0abf4b4e53fd
 
 </div>
+<h1 style="text-align: center;color: blue;">Reviews</h1>
+<div class="mycards">
+    <div class="cards">
 
+        <img src="picture/1.png" alt="">
+        <p>Great eLearning courses. Time effective and well structured, with plenty examples and learning resources. Well done good eLearning</p>
+    </div>
+    <div class="cards">
+        <img src="picture/2.png" alt="">
+        <p>Very good courses and easy to access</p>
+    
+    </div>
+    <div class="cards">
+        <img src="picture/3.png" alt="">
+        <p>Excellent content delivered in various ways which keeps you interested. 2nd course i am doing with goodelearning and fully recommend</p>
+    
+    </div>
+    <div class="cards">
+        <img src="picture/9.png" alt="">
+        <p>Interactive eLearning presentation. I really enjoyed that presentation which helped me to understand the topic very easily</p>
+    
+    </div>
+    </div>
 
 
 <!-- footer -->
@@ -668,10 +775,10 @@ color:yellow;
             <section class="categories">
                 <h3>Categories</h3>
                 <ul>
-                    <li> <a href="#">C</a> </li>
+                    <li> <a href="files/C.php">C</a> </li>
                     <li> <a href="#">UI Design</a> </li>
                     <li> <a href="#">PHP</a> </li>
-                    <li> <a href="#">Java</a> </li>
+                    <li> <a href="files/java1.php">Java</a> </li>
                     <li> <a href="#">Android</a> </li>
                     <li> <a href="#">Templates</a> </li>
                     
@@ -680,10 +787,10 @@ color:yellow;
             <section class="quick-links">
                 <h3>Quick-links</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="files/aboutus.html">About Us</a></li>
+                    <li><a href="files/contact.html">Contact Us</a></li>
                     <li><a href="#">Contribute</a></li>
-                    <li><a href="#">Java</a></li>
+                    <li><a href="files/java1.php">Java</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Sitemap</a></li>
                    
@@ -703,7 +810,7 @@ color:yellow;
        
         <section class="sec-2">
             <h3>Register for Free</h3>
-            <a href="#">Signup!</a>
+            <a href="files\signIn.html">Signup!</a>
 
         </section>
 
