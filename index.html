@@ -29,14 +29,14 @@ body {
 {
     border:0px solid red;
     position: relative;
-    height: 5000px;
+    height: 2500px;
 
 }
 .header
 {
     height: 70px;
     width: 100%;
-    
+    z-index: 4;
     background: linear-gradient(to right,lightgreen,green);
        
     display: flex;
@@ -146,8 +146,10 @@ body {
 
 .rightbar
 {
+    z-index:3;
     display: block;
-    position: fixed;
+    position: absolute;
+   
     right: 0;
     top: 70px;
     width: 20%;
@@ -186,6 +188,7 @@ i
     position: fixed;
     top: 20px;
     left: 40px;
+    z-index: 6;
 }
 
 .hide-btn
@@ -471,7 +474,7 @@ i
 
     position: fixed;
     top: 200px;
-    color: rgb(81, 152, 214);
+    color:whitesmoke;
     left: 350px;
     font-size: 35px;
     background-color: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
@@ -484,8 +487,9 @@ i
     top: 300px;
     left: 600px;
     border-radius: 10px;
-    background: linear-gradient(to right,white,green);
+    /* background: linear-gradient(to right,white,green); */
     padding: 10px 10px;
+    background-color: transparent;
 
 }
 
@@ -515,7 +519,7 @@ input[type='text']
   z-index: -1;
   
 }
-#btnName
+.button a
 {
 width: 90px;
   height: 50px;
@@ -533,7 +537,7 @@ width: 90px;
 display:flex;
 justify-content:center;
 align-items: center;
-
+z-index: 4;
 color:yellow;
 /* text-decoration:none; */
 
@@ -545,9 +549,10 @@ color:yellow;
 
 
 </head>
-<body  onload="myMove()";>
+<body>
  
- <div class="container">   
+ <div class="container">  
+
     <div class="header">
         <h1>Study <sub>Point</sub></h1>
         <input type="text" placeholder="Search here">
@@ -579,6 +584,7 @@ color:yellow;
     <!-- right Side -->
     <div class="rightbar">
         <ul>
+            <li><a href="https://vikasyadav18.github.io/miniProject/files/daa1Intro.html"><i class="fa fa-tasks"><span>Data Structure</span></i></a></li>
             <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C-Introduction</span></i></a></li>
             <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C-programming</span></i></a></li>
             <li><a href="https://vikasyadav18.github.io/miniProject/files/python1.html"><i class="fa fa-tasks"><span>1-Python</span></i></a></li>
@@ -592,26 +598,29 @@ color:yellow;
       
     </div>
     <br>
+    <img src="D:\miniproject\files\picture\background.jpg" alt="" style="background-size:cover; width:100%;height: 100%;" >
+ 
     <div class="content1">
 
-     <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
+           <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
     </div>
 
     <div class="button">
         <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a>
     </div>
-    <div id ="myContainer">
+    
+    <!-- <div id ="myContainer"> 
         <div  class="button" id ="myAnimation">
             <button id="btnName"> 
                 <a id="btnlink" href="https://vikasyadav18.github.io/miniProject/files/signIn.html">
                     <sub>let's</sub>JOIN </a>
             </button>
         </div>
-    </div>
+    </div> -->
     <!-- <div class="button">
         
     </div> -->
-    <script>
+    <!-- <script>
         function myMove() {
           var elem = document.getElementById("myAnimation");   
           var pos = 0;
@@ -626,7 +635,7 @@ color:yellow;
             }
           }
         }
-        </script>
+        </script> -->
 
 </div>
 
