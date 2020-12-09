@@ -262,8 +262,14 @@ i
 
 .footer
 {
-    position: sticky;
-    top: 4000px;       
+    /* position: sticky; */
+    display:none;
+    top: 3500px;       
+
+}
+.container
+{
+  height: 1600px;
 
 }
 .content
@@ -359,7 +365,7 @@ i
              /* background-color:  rgb(54, 53, 53); */
              background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
    
-             flex-direction: ;
+        
          }
          
 
@@ -466,27 +472,37 @@ i
 
          .Ccontent p
          {
-             color: rgb(153, 0, 255);  ;
+             color: rgb(14, 13, 15);  ;
          }
 
          .text
          {
             position: relative;
             top: 90px;
-            width: 40%;
+            width: 60%;
             font-size: 20px;
             float: left;
+            margin-right: 30px;
          }
-
+        
+         .Ccontent{
+    border:2px solid black;
+    height:1400px;
+    width:70%;
+    overflow:auto;
+    padding:10px;
+    display:block;
+}
          .Ccontent
          {
-             display: flex;
+             /* display: flex; */
              position: relative;
             z-index: 2;
              left: 100px;
-             justify-content:space-evenly;
+             /* justify-content:space-evenly; */
+             text-align: justify;
              align-items: center;
-             width: 60%;
+             /* width: 60%; */
          }
          .orderlist
          {
@@ -497,12 +513,12 @@ i
          }
 .orderlist li
 {
-    color: purple;
+    color: rgb(5, 4, 5);
 }
          table, th, td {  
   border: 2px solid black;  
   border-collapse: collapse;
-  color: rgb(153, 0, 255); 
+  color: rgb(15, 12, 17); 
   padding: 15px 15px; 
 } 
 .table
@@ -510,9 +526,51 @@ i
     position: relative;
     top: 80px;
     width: 20%;
-    float: right;
+    float: left;
     
 }
+.table::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.mybut{
+    clear: both;
+    display:block;
+    margin-top: 40px;
+
+}
+.mybut button{
+    display:block;
+    width:100px;
+    height:30px;
+    border-radius:20px;
+    color:white;
+    background-color:orange;
+    border:none;
+}
+.mybut a{
+    text-decoration:none;
+    color:white;
+}
+.mybut .next{
+float:right;
+}
+.mybut .pre{
+float:left;
+}
+#search input{
+       position:relative;
+        left:500px;
+        width:200px;
+        height:40px;
+    }
+    .fa-search{
+        position:relative;
+        left:510px;
+        color:white;
+    
+    }
 
    
     </style>
@@ -524,7 +582,11 @@ i
  <div class="container">   
     <div class="header">
         
-        <h1 >E-<sub>Learning</sub></h1>
+        <h1>Study <sub>Point</sub></h1>
+        <form action="../php/search.php" method="POST" id="search">
+            <input type="search" name="searchcontent" placeholder="Search here">
+             <i class="fa fa-search"></i>
+            </form>
     </div>
      
     <input type="checkbox" id="chk">
@@ -537,11 +599,11 @@ i
     </label>
     <div class="sidebar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-home"><span>home</span></i></a></li>
-            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
-            <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
-            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+            <li><a href="../index.html"><i class="fa fa-home"><span> home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span> About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span> services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span> Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span> Contact</span></i></a></li>
         </ul>
        <div class="social" id="social1">
            <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -552,29 +614,26 @@ i
 
     <!-- right Side -->
     <div class="rightbar">
-        <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C Intro</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C programming</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/index.html"><i class="fa fa-rss"><span>More</span></i></a></li>
-        </ul>
+         <ul>
+            <li><a href="C.php"><i class="fa fa-tasks"><span> C programming</span></i></a></li>
+            <li><a href="Cintro.html"><i class="fa fa-tasks"><span> History of C</span></i></a></li>
+            <li><a href="C3.html"><i class="fa fa-tasks"><span> How to install C</span></i></a></li>
+            <li><a href="../index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
+            <li><a href="../php/logout.php"><i class="fa fa-id-card"><span> logout</span></i></a></li>
+        </ul> 
       
     </div>
     <br>
     
 <!-- content of C intro programming -->
-<img title="C programming" style=" height: 20rem; width: 70rem; display: block; margin-left:50px; margin-right: auto; margin-top: 100px;" src="picture/cpro1.jpg" alt="">
 <div class="Ccontent">
     <div class="text"  style="text-align:justify">
         
-        <h1 style="color: rgb(135, 128, 228);">History of C programming language</h1>
+        <h1>History of C programming language</h1>
         <p> It is good to learn about the history of C programming. C was developed and written by Dennis M. Ritchie in the year 1972, and hence he is known as the founder of C.
          C programming language was developed to overcome the difficulties found in older programming languages such as BCPL, BASIC, B, etc.
-        </p>
-    <h2> History of C programming language<h2>
-        
-    <p>
         C is imperative language and designed to compile in a relatively straightforward manner which provides low-level access to the memory. With the gradual increase in the popularity of the program, the language and its compiler have become available on a wide range of platforms from embedded microcontrollers to supercomputers.<br>
-With the introduction of K&R C language (which is a new edition of C published in 1978 by Brian Kernighan and Denis Ritchie), several features have been included in C language.</h3>
+With the introduction of K&R C language (which is a new edition of C published in 1978 by Brian Kernighan and Denis Ritchie), several features have been included in C language.
 </p>  
 
 <h2>Some of these features are:</h2>
@@ -618,8 +677,15 @@ With the introduction of K&R C language (which is a new edition of C published i
         </table>
         
         </div>
+        
+        <div class="mybut">
+            <button class="pre"><a href="C.php">previous </a></button>
+            <button class="next"><a href="Cintro.html"> Next </a> </button>
+            </div>       
+
        
 </div>
+
 
 <!-- content of C intro programming -->
 

@@ -26,21 +26,16 @@ body {
 
 .container
 {
-
-    border:0px solid red;
-    position: relative;
-    height: 2500px;
-
     
     height: 600px;
-
+    
 
 }
 .header
 {
     height: 70px;
     width: 100%;
-    z-index: 4;
+    
     background: linear-gradient(to right,lightgreen,green);
        
     display: flex;
@@ -152,14 +147,9 @@ body {
 
 .rightbar
 {
-    z-index:3;
     display: block;
-
-    position: absolute;
-
      position: absolute; 
    z-index: 0;
-
     right: 0;
     top: 70px;
     width: 20%;
@@ -199,7 +189,7 @@ i
     position: fixed;
     top: 20px;
     left: 40px;
-    z-index: 6;
+    z-index: 4;
 }
 
 .hide-btn
@@ -369,6 +359,7 @@ i
              /* background-color:  rgb(54, 53, 53); */
              background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
    
+             /* flex-direction: ; */
          }
          
 
@@ -500,7 +491,6 @@ z-index:0;
     border-radius: 10px;
     background: linear-gradient(to right,white,green);
     padding: 10px 10px;
-    
 
 }
 
@@ -563,10 +553,9 @@ margin-bottom: 10px;
 </head>
 <body>
  
- <div class="container">  
-
+ <div class="container">   
     <div class="header">
-        <h1>E-<sub>Learning</sub></h1>
+        <h1>Study <sub>Point</sub></h1>
         <a href="php/logout.php" class="logout"><i class="fa fa-id-card"><span> Log out</span></i></a>
         <form action="php/search.php" method="POST">
         <input type="search" name="searchcontent" placeholder="Search here">
@@ -601,58 +590,59 @@ margin-bottom: 10px;
     <!-- right Side -->
     <div class="rightbar" id="rightsidebar">
         <ul>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/daa1Intro.html"><i class="fa fa-tasks"><span>Data Structure</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/Cintro.html"><i class="fa fa-tasks"><span>C-Introduction</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/C.html"><i class="fa fa-tasks"><span>C-programming</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/python1.html"><i class="fa fa-tasks"><span>1-Python</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/python2.html"><i class="fa fa-tasks"><span>2-Python</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++1.html"><i class="fa fa-tasks"><span>Learn C++</span></i></a></li>
-            <li><a href="https://vikasyadav18.github.io/miniProject/files/c++2.html"><i class="fa fa-tasks"><span>Application and classes of C++</span></i></a></li>
-            <li><a href="#"><i class="fa fa-tasks"><span>Learn HTML</span></i></a></li>
-            <li><a href="#"><i class="fa fa-tasks"><span>Learn Java</span></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"><span>More</span></i></a></li>
+            <li><a href="files/java1.php"><i class="fa fa-tasks"><span> Java</span></i></a></li>
+            <li><a href="files/C.php"><i class="fa fa-tasks"><span> C-programming</span></i></a></li>
+            <li><a href="files/python1.php"><i class="fa fa-tasks"><span> Python</span></i></a></li>
+            
+            <li><a href="files/c++.php"><i class="fa fa-tasks"><span> C++</span></i></a></li>
+            
+            <li><a href="files/html1.php"><i class="fa fa-tasks"><span> HTML</span></i></a></li>
+              <li><a href="index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
         </ul>
       
     </div>
     <br>
-    <img src="https://vikasyadav18.github.io/miniProject/files/picture\background.jpg" alt="" style="height: 100%; width: 100%;">
     <div class="content1" >
 
-           <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
+     <h1>   Welcome to E-Learning <span><sub>let's study</sub></span></h1>        
     </div>
 
-    <div class="button">
-        <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a>
-    </div>
+    <div class="button" >
+        <!-- <a href="https://vikasyadav18.github.io/miniProject/files/signIn.html"><sub>let's</sub>JOIN</a> -->
+        <a href="files/signIn.html" ><sub>let's</sub>JOIN</a>
     
-    <!-- <div id ="myContainer"> 
-        <div  class="button" id ="myAnimation">
-            <button id="btnName"> 
-                <a id="btnlink" href="https://vikasyadav18.github.io/miniProject/files/signIn.html">
-                    <sub>let's</sub>JOIN </a>
-            </button>
-        </div>
-    </div> -->
-    <!-- <div class="button">
-        
-    </div> -->
-    <!-- <script>
-        function myMove() {
-          var elem = document.getElementById("myAnimation");   
-          var pos = 0;
-          var id = setInterval(frame, 10);
-          function frame() {
-            if (pos == 150) {
-              clearInterval(id);
-            } else {
-              pos++; 
-              elem.style.top = pos + 'px'; 
-              elem.style.left = pos + 'px'; 
-            }
-          }
-        }
-        </script> -->
+    </div>
 
+<!-- 
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div>
+    <div class="cards"></div> -->
+
+</div>
+<h1 style="text-align: center;color: blue;">Reviews</h1>
+<div class="mycards">
+    <div class="cards">
+
+        <img src="picture/1.png" alt="">
+        <p>Great eLearning courses. Time effective and well structured, with plenty examples and learning resources. Well done good eLearning</p>
+    </div>
+    <div class="cards">
+        <img src="picture/2.png" alt="">
+        <p>Very good courses and easy to access</p>
+    
+    </div>
+    <div class="cards">
+        <img src="picture/3.png" alt="">
+        <p>Excellent content delivered in various ways which keeps you interested. 2nd course i am doing with goodelearning and fully recommend</p>
+    
+    </div>
+    <div class="cards">
+        <img src="picture/9.png" alt="">
+        <p>Interactive eLearning presentation. I really enjoyed that presentation which helped me to understand the topic very easily</p>
+    
+    </div>
+    </div>
 
 
 <!-- footer -->

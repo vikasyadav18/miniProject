@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how to install C</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        
+*
+{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+        scroll-behavior: smooth;
+        scroll-padding-top:120px ;
+      }
+body {
+  background-image: url("picture/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  
+}
+
+.container
+{
+    border:0px solid red;
+    position: relative;
+    height: 1100px;
+
+}
+.header
+{
+    height: 70px;
+    width: 100%;
+    z-index:5;
+    background: linear-gradient(to right,lightgreen,green);
+    
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+}
+.header img
+{
+    margin-right: 15px;
+    width: 70px;
+    height: 70px;
+    
+}
+.header h1
+{
+    z-index: 1;
+   line-height: 70px;
+    color: white;
+}
+.content1
+{
+    
+    width: 100%;
+    padding: 20px;
+
+}
+.content1 img
+{
+   
+    width:70%;
+  
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+.content1 p
+{
+    
+    text-align: justify;
+}
+.sidebar
+{
+    width: 20%;
+    height: 700px;
+    
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+    left: -100%;
+    position: absolute;
+    top: 70px;
+   transition: .4s;
+
+}
+.sidebar ul
+{
+    list-style: none;
+    
+
+}
+
+.sidebar ul li
+{
+    border-bottom: 2px solid rgba(255,255,255,.1);
+}
+
+.sidebar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.sidebar ul li a i
+{
+    margin-right: 15px;
+}
+
+.sidebar ul li a:hover
+{
+    border-left: 15px solid white;
+}
+
+.rightbar ul li
+{
+    padding-top: 20px;
+}
+.rightbar ul
+{
+    list-style: none;
+   
+}
+.rightbar ul li a
+{
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: .4s;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.rightbar
+{
+    z-index:3;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 20%;
+    height: 925px;
+    background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+}
+
+.social
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255,255,255,.1) ;
+    border-top: 2px solid rgba(255,255,255,.1) ;
+    justify-content: space-evenly;
+    font-size: 25px;
+    margin-top: 360px;
+    padding:10px 25px;
+}
+#chk
+{
+   visibility: hidden;
+}
+
+i
+{
+    color: white;
+   
+    
+}
+.show-btn,.hide-btn
+{
+    color: white;
+    font-size: 30px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+}
+
+.hide-btn
+{
+    opacity: 0;
+}
+#chk:checked ~ .sidebar
+{
+    
+    left: 0%;
+}
+
+#chk:checked ~ .hide-btn
+{
+    opacity: 1;
+}
+
+#chk:checked ~ .show-btn
+{
+    opacity: 0;
+}
+
+#chk:checked ~ .content1
+{
+    width: 80%;
+    margin: auto;
+
+}
+
+
+@media (max-width: 780px)
+{
+    .sidebar
+    {
+        width: 100vw;
+        display: flex;
+       
+        justify-content:center;
+        
+
+    }
+
+    .social
+    {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        
+        justify-content: center;
+
+       
+    }
+    .social a i
+    {
+        padding-left: 10px;
+
+    }
+
+
+
+  
+}
+
+
+
+
+
+.footer
+{
+    position: sticky;
+    top: 400px;  
+    display:none;     
+
+}
+.content
+         {
+             position: absolute;
+           display: block;
+            justify-content: center;
+            color: rgb(110, 109, 109) !important;
+            border: 2 px solid white;
+            bottom: 0px;
+            left: 0;
+         }
+
+         .sec-1
+         {
+ 
+             
+             background: linear-gradient(to right,rgba(128, 255, 170,0.7), rgba(0, 255, 85,0.7));
+   
+             display: flex;
+             flex-direction: row;
+             width: 100%;
+             height: auto;
+             padding: 15px;
+             justify-content:space-between;
+         }
+
+         .about
+         {
+             width: 40%;
+         }
+
+         .about h3
+         {
+             color: aliceblue;
+         }
+         .about p
+         {
+             color: rgb(145, 137, 137);
+
+         }
+
+      
+
+         i
+         {
+             padding-right: 5px;
+         }
+         
+
+         a{
+             color: rgb(145, 137, 137);
+             text-decoration: none;
+             text-align: justify;
+         }
+         a:hover
+         {
+             color: orange;
+         }
+         li
+         {
+             color:  rgb(145, 137, 137);
+             list-style: none;
+         }
+
+         h3
+         {
+             text-transform: uppercase;
+             color: aliceblue ;
+             padding-bottom: 5px;
+         }
+         .categories h3
+         {
+            color: aliceblue;
+         }
+
+         .contact
+         {
+             display: display-flex;
+             justify-content: center;
+         }
+
+         .sec-2
+         {
+            
+             
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             padding-top: 20px;
+             padding-bottom: 30px;
+             border-bottom:2px solid rgb(134, 129, 129) ;
+ 
+             background: linear-gradient(to right,rgba(51, 151, 255,0.7), rgba(53, 51, 255,0.7));
+   
+             /* flex-direction: ; */
+         }
+         
+
+         .sec-2 h3
+         {
+            text-transform: inherit !important;
+             color: rgb(145, 137, 137) !important;
+         }
+
+         .sec-2 a
+         {
+            
+             color: white;
+             background-color: red;
+             padding: 5px 15px;
+             margin-left: 10px;
+             border-radius: 15px;
+         }
+
+         .sec-2 a:hover
+         {
+             background-color: orange;
+         }
+
+         .sec-3
+         {
+             display: flex;
+             justify-content:center;
+             padding-top:20px;
+             padding-bottom:20px;
+             background-color: rgb(54, 53, 53);
+
+         }
+
+         .sec-3 a
+         {
+             padding: 5px;
+             margin-left: 10px;
+             background-color: rgb(238, 235, 235,.1);
+             border-radius: 20px;
+             font-size: 20px;
+         }
+
+        .facebook:hover
+        {
+            background-color: blue;
+        }
+
+        .twitter:hover
+        {
+            background-color: skyblue;
+        }
+        .google:hover
+        {
+            background-color: red;
+        }
+        .linkedin:hover
+        {
+            background-color: lightblue;
+        }
+        .dribbble:hover
+        {
+            background-color: pink;
+        }
+
+
+         
+         .sec-4
+         {
+             display: flex;
+             justify-content: center;
+             background-color: black;
+             height: 50px;
+
+
+         }
+
+         .sec-4 p
+         {
+             line-height: 50px;
+             color: rgb(145, 137, 137);
+
+         }
+
+         .sec-4 p::after
+         {
+             content: '';
+             display: block;
+             width: 0;
+             height: 3px;
+             background-color: orange;
+             position: relative;
+            transition: all .3s;
+            right: 0;
+            bottom: 10px;
+         }
+
+
+
+         .sec-4 p:hover::after
+         { 
+             width: 100%;
+         }
+         .Ccontent h2 , h3
+         {
+            color: rgb(2, 2, 7); 
+         }
+     
+         .Ccontent
+         {
+             padding: 10px;
+            border:2px solid black;
+             display:block;
+             position: absolute;
+             top: 100px;
+             left: 100px;
+             justify-content: center;
+             align-items: center;
+             width: 70%;
+             overflow:auto;
+             height:900px;
+            
+         }
+         .mybut button{
+    display:inline-block;
+    width:100px;
+    height:30px;
+    border-radius:20px;
+    color:white;
+    background-color:orange;
+    border:none;
+    
+}
+.mybut a{
+    text-decoration:none;
+    color:white;
+}
+.mybut .next{
+float:right;
+}
+.Ccontent ol li{
+list-style: circle;
+color: black;
+margin-left: 40px;
+         }
+         #search input{
+       position:relative;
+        left:500px;
+        width:200px;
+        height:40px;
+    }
+    .fa-search{
+        position:relative;
+        left:510px;
+        color:white;
+    
+    }
+
+        </style>
+</head>
+<body>
+    <div class="container">   
+        <div class="header">
+            
+            <h1 >Study <sub>Point</sub></h1>
+            <form action="../php/search.php" method="POST" id="search">
+                <input type="search" name="searchcontent" placeholder="Search here">
+                 <i class="fa fa-search"></i>
+                </form>
+        </div>
+         
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+       
+        <label for="chk" class="hide-btn">
+            <i class="fa fa-times"></i>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="../index.html"><i class="fa fa-home"><span>home</span></i></a></li>
+                <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+                <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+                <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+            </ul>
+           <div class="social" id="social1">
+               <a href="#"><i class="fa fa-facebook-square"></i></a>
+               <a href="#"><i class="fa fa-youtube-square"></i></a>
+               <a href="#"><i class="fa fa-instagram"></i></a>
+           </div>
+        </div>
+    
+        <!-- right Side -->
+        <div class="rightbar">
+            <ul>
+                <li><a href="java1.php"><i class="fa fa-tasks"><span> java introduction</span></i></a></li>
+                <li><a href="java2.html"><i class="fa fa-tasks"><span> Application Of Java</span></i></a></li>
+                <li><a href="java3.html"><i class="fa fa-tasks"><span> History of java</span></i></a></li>
+                <li><a href="java4.html"><i class="fa fa-tasks"><span> Features of Java</span></i></a></li>
+                <li><a href="java5.html"><i class="fa fa-tasks"><span> How to set path in java</span></i></a></li>
+                <li><a href="java6.html"><i class="fa fa-tasks"><span> First java programm</span></i></a></li>
+                <li><a href="java7.html"><i class="fa fa-tasks"><span> Internal Details of Hello Java Program</span></i></a></li>
+                <li><a href="java8.html"><i class="fa fa-tasks"><span> JVM Architecture</span></i></a></li>
+                <li><a href="java9.html"><i class="fa fa-tasks"><span> Java Variables</span></i></a></li>
+                <li><a href="../index.html"><i class="fa fa-rss"><span> More</span></i></a></li>
+                <li><a href="../php/logout.php"><i class="fa fa-id-card"><span> logout</span></i></a></li>
+            </ul>
+          
+        </div>
+        <br>
+       
+    
+    <div class="Ccontent">
+    <div style="text-align:justify">
+        <h1>First Java Program </h1><br><br>
+        In this page, we will learn how to write the simple program of java. We can write a simple hello java program easily after installing the JDK.To create a simple java program, you need to create a class that contains the main method. Let's understand the requirement first.
+<br><br>
+         The requirement for Java Hello World Example
+        <br><br>
+       <b> For executing any java program, you need to</b>
+       <br><br>
+       <ol>
+           <li>Install the JDK if you don't have installed it, download the JDK and install it</li><br>
+           <li>Set path of the jdk/bin directory. </li><br>
+           <li>Create the java program</li><br>
+           <li>Compile and run the java program</li><br>
+       </ol><br><br>
+      <h2> Creating Hello World Example<br><br></h2>
+
+     <b>  Let's create the hello java program:<br><br></b>
+    <pre>
+        class simple
+        {
+            public static void main(String args[])
+            {
+                System.out.println("Hello World");
+            }
+        }
+        save this file simple.java
+
+     <b>To compile :</b>   javac simple.java
+
+     <b>To execute :</b>    java simple
+
+     <b>Output :</b>     Hello World
+
+    </pre>
+    <b>Compilation Flow:</b>When we compile Java program using javac tool, java compiler converts the source code into byte code.<br><br>
+    <img src="../picture/56.png" alt="" width="60%" height="40%" ><br><br>
+   <b> Java How to Compile</b><br><br>
+Parameters used in First Java Program<br><br>
+Let's see what is the meaning of class, public, static, void, main, String[], System.out.println().<br><br>
+<b>class</b> keyword is used to declare a class in java.<br><br>
+<b>public </b> keyword is an access modifier which represents visibility. It means it is visible to all.<br><br>
+<b>static </b> a keyword. If we declare any method as static, it is known as the static method. The core advantage of the static method is that there is no need to create an object to invoke the static method. The main method is executed by the JVM, so it doesn't require to create an object to invoke the main method. So it saves memory.<br><br>
+<b>void</b> is the return type of the method. It means it doesn't return any value.<br><br>
+<b>main</b> represents the starting point of the program.<br><br>
+<b>String[] args</b> is used for command line argument. We will learn it later.<br><br>
+<b>System.out.println()</b> is used print statement. We will learn about the internal working of System.out.println statement later.<br><br>
+
+To write the simple program, you need to open notepad by start menu -> All Programs -> Accessories -> notepad and write a simple program as displayed below:<br><br>
+<img src="../picture/57.png" alt="" width="50%" height="40%" ><br><br>
+The first program of java<br><br>
+As displayed in the above diagram, write the simple program of java in notepad and saved it as Simple.java. To compile and run this program, you need to open the command prompt by start menu -> All Programs -> Accessories -> command prompt.
+<br><br>
+<img src="../picture/58.png" alt="" width="50%" height="40%" ><br><br>
+There are many ways to write a Java program. The modifications that can be done in a Java program are given below:<br><br>
+<ol>
+    <li>By changing the sequence of the modifiers, method prototype is not changed in Java.</li><br>
+    Let's see the simple code of the main method.<br>
+    <ol>
+        <li>static public void main(String args[])  </li><br>
+    </ol>
+    <li>The subscript notation in Java array can be used after type, before the variable or after the variable.</li><br>
+    Let's see the different codes to write the main method.<br>
+    <ol>
+        <li>public static void main(String[] args)    </li><br>
+        <li>  public static void main(String []args)   </li> <br>
+        <li>  public static void main(String args[])  </li><br>
+    </ol>
+    <li>You can provide var-args support to the main method by passing 3 ellipses (dots)</li><br>
+    Let's see the simple code of using var-args in the main method. We will learn about var-args later in Java New Features chapter.<br>
+  <ol>
+      <li> public static void main(String... args)  </li><br>
+  </ol>
+  <li>Having a semicolon at the end of class is optional in Java. </li><br>
+  Let's see the simple code.<br>
+  <pre>
+    class A
+    {  
+            static public void main(String... args)
+            {  
+            System.out.println("hello java4");  
+            }  
+    }; 
+        
+  </pre>
+  valid java main method signature<br><br>
+  <li>    public static void main(String[] args)  </li><br>
+    <li>   public static void main(String []args)  </li><br>
+        <li>  public static void main(String args[])  </li><br>
+            <li>  public static void main(String... args)  </li><br>
+                <li>  static public void main(String[] args)  </li><br>
+                    <li> public static final void main(String[] args)  </li><br>
+                        <li> final public static void main(String[] args) </li> <br>
+                            <li> final strictfp public static void main(String[] args) </li><br>
+    Invalid java main method signature<br><br>
+    <li>public void main(String[] args)  </li><br>
+        <li>   static void main(String[] args)  </li><br>
+            <li>   public void static main(String[] args)  </li><br>
+            <li>   abstract public static void main(String[] args)</li><br>
+        
+
+</ol>
+
+       </div>
+        <div class="mybut">
+            <button class="pre"><a href="java5.html"> previous</button>
+            <button class="next"><a href="java7.html"> Next </a> </button>
+            </div>
+            </div>
+    <div class="footer">
+       
+        <footer>
+            <section class="sec-1">
+    
+                <section class="about">
+                    <h3>About</h3>
+                    <p style="overflow:hidden;">The physical classroom learning nowadays is no longer 
+                        applicable for the current younger generations (Gen Y). In an 
+                        era known as the society of technology and knowledge, where 
+                        lifelong learning is a way of life, we are developing a website 
+                        named as “study point” for goal of finding effective ways of 
+                        providing new learning material. The project is a Java based 
+                        project developed with the help of Java, HTML and CSS .This 
+                        E-learning website includes computer based learning. This E-
+                        learning website provide knowledge to the students about 
+                        various topics and in an effort to make learning more 
+                        efficient, equitable and innovative. It provides efficiency and 
+                        effectiveness in providing education to the students .This 
+                        website has no registered user, any guest user can take 
+                        advantage of it.</p>
+                </section>
+                <section class="categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li> <a href="#">C</a> </li>
+                        <li> <a href="#">UI Design</a> </li>
+                        <li> <a href="#">PHP</a> </li>
+                        <li> <a href="#">Java</a> </li>
+                        <li> <a href="#">Android</a> </li>
+                        <li> <a href="#">Templates</a> </li>
+                        
+                    </ul>
+                </section>
+                <section class="quick-links">
+                    <h3>Quick-links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                       
+                    </ul>
+                </section>
+                <section class="contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li> <a href="#"> <i class="fa fa-home"></i> <span>GLA University mathura UP,India</span> </a></li>
+                        <li> <a href="#"> <i class="fa fa-envelope-o"></i> <span>studyPoint@gmail.com</span></a></li>
+                        <li> <a href="#"> <i class="fa fa-mobile"></i> <span>90******35</span></a></li>
+                        <li> <a href="#"> <i class="fa fa-facebook"></i><span>StudyPoint</span> </a></li>
+                    </ul>
+                </section>
+    
+            </section>
+           
+            <section class="sec-2">
+                <h3>Register for Free</h3>
+                <a href="#">Signup!</a>
+    
+            </section>
+    
+            
+    
+            <section class="sec-3">
+               <a href="#" class="facebook" ><i class="fa fa-facebook" ></i></a> 
+               <a href="#" class="twitter"><i class="fa fa-twitter" ></i></a> 
+               <a href="#" class="google" ><i class="fa fa-google" ></i></a> 
+               <a href="#" class="linkedin" ><i class="fa fa-linkedin" ></i></a> 
+               <a href="#" class="dribbble" ><i class="fa fa-dribbble" ></i></a> 
+            </section>
+            
+            <section class="sec-4">
+                <p>Copyright @ 2020 All Rights Reserved by <span> <a href="#">Study Point</a></span> </p>
+            </section>
+        </footer>
+    </div> 
+</body>
+</html>

@@ -14,7 +14,7 @@
 
         body
          {
-        background-image: url('https://vikasyadav18.github.io/miniProject/picture/background.jpg');
+        background-image: url('../picture/edu1.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size:cover;
@@ -48,10 +48,11 @@
         position: relative;
         right: 50px;
         margin-top: 40px;
-        width: 600px;
-        height: 550px;
+        width: 450px;
+        height: 500px;
         background-color: #fff;
         margin-right: 10px;
+        border-radius: 20px;
        
     }
     .form-header-t2
@@ -96,6 +97,7 @@
         width: 100%;
         
     }
+
     .form-container-t2 p
     {
         font-size: 12px;
@@ -116,7 +118,7 @@
         border-radius: 20px;
         background-color:rgb(148, 76, 243);
         color: white;
-        
+       
         padding:10px 20px; 
     }
     input[type='checkbox']
@@ -141,6 +143,7 @@
     }
     .social2
     {
+        margin-top: 65px;
         width: 100%;
         height: 65px;
         background: linear-gradient(to right,rgb(7, 139, 190),white);
@@ -148,6 +151,7 @@
         justify-content: center;
         flex-direction: row;
         align-items: center;
+        border-radius: 20px;
         
     }
     .social2 i
@@ -175,18 +179,23 @@
        
     </div>
     <div class="form-container-t2">
+        <form action="../php/login.php" method="POST" name="f1" >
         <div>
-            <input type="email" name="email" id="email" placeholder="Enter Email">
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
         </div>
 
         <div>
-            <input type="password" name="pwd" id="pwd" placeholder="Enter Password">
+            <input type="password" name="pwd" id="pwd" placeholder="Enter Password" required>
         </div>
-
-        <input type="checkbox" >
+<div class="check" >
+        <input type="checkbox" required>
         <p id="p1">Accept the <a href="#"> <b>Terms and Conditions</b> </a></p>
+        </div>
+        <div class="check" style="margin:auto;width: 100px;">
         <input type="submit" value="LOGIN" id="login">
-        <p id="p2">have an account? Login <a href="#"><b>Login</b></a> </p>
+        </div>
+        <p id="p2" style="margin-top: 50px;">haven't account? Login <a href="signup.html"><b>Signup</b></a> </p>
+        </form>
     </div>
     <div class="social2">
        <a href="#"> <i class="fa fa-facebook"></i></a>
